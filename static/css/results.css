@@ -59,7 +59,6 @@ footer i.fa-instagram{
 }
 
 .copyright_text {
-  font-family: 'proxima_nova_rgbold', Helvetica, Arial, sans-serif;
   color: #707070;
   line-height: 170%;
 }
@@ -173,9 +172,13 @@ footer i.fa-instagram{
   padding: 15px;
   margin:30px;
   border-radius: 10px;
-  border-color:#f1f4fa;
-  background-color: #f1f4fa;
+  border-color:#ffffff;
+  background-color: #ffffff;
   color: #4a4a4a;
+}
+
+.card-body {
+  text-align: center;
 }
 
 .card:hover{
@@ -192,7 +195,7 @@ footer i.fa-instagram{
 
 .card-title{
   margin-top:50px; 
-  font-family: 'proxima_nova_rgbold', Helvetica, Arial, sans-serif;
+  font-weight: bold;
 }
 
 .card-holder{
@@ -263,9 +266,7 @@ footer i.fa-instagram{
   margin-right: 10px;
 }
 
-.details-card b{
-  font-family: 'proxima_nova_rgbold', Helvetica, Arial, sans-serif;
-}
+
 
 .details-card div {
   margin-bottom: 10px;
@@ -283,6 +284,16 @@ footer i.fa-instagram{
 /* ! ======================================================================================== */
 
 /* ! ==================================== Side-Filters ========================================== */
+
+.form-check {
+  padding-left: 10%;
+  text-align: left;
+}
+
+.form-check-label {
+  margin-bottom: 10px;
+}
+
 .select-filters{
   margin-left: 0px !important;
   margin-right: 0px !important;
@@ -318,6 +329,49 @@ footer i.fa-instagram{
 .list-group-item-clicked:hover{
   color: #f1f4fa;
 }
+
+/*----------------- CHECK BOX ---------------------*/
+
+/* checkbox effect #1 */
+.checkbox:not(:checked), .checkbox:checked {
+  position: absolute;
+  left: -9999px;
+}
+
+.checkbox:not(:checked) + label:before, .checkbox:checked + label:before {
+  content: "";
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  border: 2px solid #d4d7d9;
+  box-sizing: border-box;
+  border-radius: 3px;
+  margin-right: 20px;
+}
+.checkbox:not(:checked) + label:after, .checkbox:checked + label:after {
+  content: "\f00c";
+  font-family: fontawesome;
+  font-size: 17px;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  position: absolute;
+  top: -2px;
+  left: 35px;
+  color: #fff;
+  transform-origin: center center;
+}
+.checkbox:not(:checked) + label:after {
+  transform: scale(0);
+}
+.checkbox:checked + label:before {
+  background-color: #ffbf69;
+  border-color: #ffbf69;
+}
+.checkbox:checked + label:after {
+  transform: scale(1);
+}
+
 
 /* ! ======================================================================================== */
 
@@ -361,6 +415,15 @@ footer i.fa-instagram{
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 /* ! ====================================================================================== */
+
+
+#searchbar_container {
+  margin-top: 70px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
 
 /* ! ====================================================================================== */
 @media only screen and (max-width: 1700px) {

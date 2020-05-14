@@ -48,11 +48,8 @@
       </ul>
   </nav>
 
-
-
-
   <!-- =============================== Filtros =============================== -->
-  <div class="container" style="flex-wrap: wrap; flex-direction: column;">
+  <div id="searchbar_container" class="container">
 
     <div class="search-bar row justify-content-between">
       <!-- Districts dropdown -->
@@ -92,6 +89,10 @@
   </div>
   <!-- ======================================================================= -->
 
+<br>
+<br>
+<br>
+
   <div class="results container-fluid">
     <div class="row card-holder justify-content-center">
 
@@ -100,16 +101,140 @@
         <h4 class="select-title"><b>Serviços</b></h6>
         <hr>
         <div class="list-group" id="filters">
+
+          <div id="saude" class="filter-group">
+            <h5>Saúde</h5>
+            <div class="form-check form-check-saude">
+              <div class="form-check">
+                <input class="form-check-input checkbox" type="checkbox" value="farmacias" id="chk-farmacias">
+                <label class="form-check-label d-flex align-items-center" for="chk-farmacias">
+                  Farmácias
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input checkbox" type="checkbox" value="hospitais" id="chk-hospitais">
+                <label class="form-check-label d-flex align-items-center" for="chk-hospitais">
+                  Hospitais
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input checkbox" type="checkbox" value="c_saude" id="chk-c_saude">
+                <label class="form-check-label d-flex align-items-center" for="chk-c_saude">
+                  Centros de Saúde
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input checkbox" type="checkbox" value="clinicas" id="chk-clinicas">
+                <label class="form-check-label d-flex align-items-center" for="chk-clinicas">
+                  Clínicas
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input checkbox" type="checkbox" value="veterinarios" id="chk-veterinarios">
+                <label class="form-check-label d-flex align-items-center" for="chk-veterinarios">
+                  Veterinários
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <hr>
+
+          <div id="alimentacao" class="filter-group">
+            <h5>Alimentação</h5>
+            <div class="form-check form-check-alimentacao">
+              <div class="form-check">
+                <input class="form-check-input checkbox" type="checkbox" value="mercados" id="chk-mercados">
+                <label class="form-check-label d-flex align-items-center" for="chk-mercados">
+                  Mercados
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input checkbox" type="checkbox" value="talhos" id="chk-talhos">
+                <label class="form-check-label d-flex align-items-center" for="chk-talhos">
+                  Talhos
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input checkbox" type="checkbox" value="padarias" id="chk-padarias">
+                <label class="form-check-label d-flex align-items-center" for="chk-padarias">
+                  Padarias
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input checkbox" type="checkbox" value="restaurantes" id="chk-restaurantes">
+                <label class="form-check-label d-flex align-items-center" for="chk-restaurantes">
+                  Restaurantes
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <hr>
+
+          <div id="servicos" class="filter-group">
+            <h5>Serviços</h5>
+            <div class="form-check form-check-alimentacao">
+              <div class="form-check">
+                <input class="form-check-input checkbox" type="checkbox" value="lavandarias" id="chk-lavandarias">
+                <label class="form-check-label d-flex align-items-center" for="chk-lavandarias">
+                  Lavandarias
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input checkbox" type="checkbox" value="telecomunicacoes" id="chk-telecomunicacoes">
+                <label class="form-check-label d-flex align-items-center" for="chk-telecomunicacoes">
+                  Telecomunicações
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input checkbox" type="checkbox" value="combustiveis" id="chk-combustiveis">
+                <label class="form-check-label d-flex align-items-center" for="chk-combustiveis">
+                  Combustíveis
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input checkbox" type="checkbox" value="gas" id="chk-gas">
+                <label class="form-check-label d-flex align-items-center" for="chk-gas">
+                  Gás
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input checkbox" type="checkbox" value="oficinas" id="chk-oficinas">
+                <label class="form-check-label d-flex align-items-center" for="chk-oficinas">
+                  Oficinas
+                </label>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
+
       <!-- ======================================================================= -->
 
       <div class="col-xl-9 col-lg-9 col-md-12">
         <!-- === Resultados da Pesquisa == -->
         <div class="row" id="results">
-          <div class="col-12 search-start">
-            <h3> Insira o seu distrito e concelho para começar a procura.</h3>
+          <div class="col-xl-4 col-lg-6 col-sm-12" id="0">
+            <img class="card-img-top" src="https://i.imgur.com/QfUEUoy.jpg" alt="Logo of the Company">
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title">
+                  O Transmontano
+                </h3>
+                <p class="card-text">
+                  Restaurante
+                </p>
+                <h4 class="card-time">
+                  12h - 20h
+                </h4>
+              </div>
+            </div>
           </div>
+          <!-- <div class="col-12 search-start">
+            <h3> Insira o seu distrito e concelho para começar a procura.</h3>
+          </div> -->
 
         </div>
           <!-- ============================= -->
@@ -130,7 +255,27 @@
   <script src="static/vendor/jquery/jquery.min.js"></script>
   <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <!-- Our JavaScript -->
-  <script src="static/js/search.js"></script>
+  <!-- <script src="static/js/search.js"></script> -->
+
+  <script>
+    $(window).on('resize', function(){
+      var card_width = $($('.card')[0]).width();
+      console.log(card_width);
+      var img_left = card_width / 2;
+      $( ".card-img-top" ).each(function( index ) {
+        $(this).css('margin-left', img_left + 'px');
+      });
+    });
+
+    $(window).on('load', function(){
+      var card_width = $($('.card')[0]).outerWidth();
+      console.log(card_width);
+      var img_left = card_width / 2;
+      $( ".card-img-top" ).each(function( index ) {
+        $(this).css('margin-left', img_left + 'px');
+      });
+    });
+  </script>
 
 </body>
 
