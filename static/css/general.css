@@ -1,0 +1,242 @@
+
+/* --------------------------------------------------------------------------------------*/
+/* -------------------------------  APPLIES TO ALL PAGES  -------------------------------*/
+/* --------------------------------------------------------------------------------------*/
+
+/* -------------------------------  BIG MAIN ELEMENTS  -------------------------------*/
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: 'Montserrat';
+  background-color: #ffffff;
+  height: 100%;
+}
+
+.section {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-left: 10%!important;
+  margin-right: 10%!important;
+}
+
+.container-fluid {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  width: 80%;
+  left: 10%;
+}
+
+.container-fluid .row {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.big_title {
+  font-size: 200%;
+  font-weight: bold;
+  font-size: 300%;
+  color: #707070;
+  line-height: 60px;
+}
+
+/* -------------------------------  NAV BAR  -------------------------------*/
+
+.nav-item {
+  font-size: 1.5rem;
+  color: #707070;
+}
+
+.ml-auto {
+  margin-right: 0!important;
+  margin-left: 0!important;
+}
+
+.nav-link {
+  color: #707070;
+}
+
+.nav-link:hover {
+  color: #4a4a4a;
+}
+
+.navbar-toggler-icon {
+  background-image: url(../img/bars-solid.svg)!important;
+}
+
+.nav-selected {
+  color: #ffbf69!important;
+}
+
+#ul_navbar {
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+/* -------------------------------  SEARCH BAR  -------------------------------*/
+
+.search-bar {
+  z-index: 7;
+  height: 70px;
+  border-radius: 100px;
+  background-color: #ffbf69;
+  align-items: center;
+  position: sticky;
+  width: 100%;
+  padding-top: 9px;
+  padding-bottom: 20px;
+}
+
+/* -------------------------------  DROP DOWN  -------------------------------*/
+
+.selectWrapper {
+  border-radius: 36px;
+  background: white;
+  margin-left: 16px;
+}
+
+.selectBox {
+  width: 100%;
+  height: 40px;
+  border: 0px;
+  outline: none;
+  font-size: 1.1rem;
+  font-weight: normal;
+}
+
+.dropdown-menu {
+  max-height: 300px;
+  overflow-y: scroll;
+  width: 90%;
+}
+
+.dropdown-item {
+  cursor: pointer;
+}
+
+.dropdown-filter {
+  display: none;
+}
+
+.dropdown-toggle::after {
+  margin-top: 10px;
+}
+
+/* -------------------------------  SEARCH BUTTON  -------------------------------*/
+
+.button_box {
+  text-align: right;
+  margin-right: 5px;
+  padding-right: 0!important;
+}
+
+.search_button {
+  padding-left: 4px !important;
+  padding-top: 5px !important;
+  color: #ffffff;
+  box-shadow: none;
+}
+
+/* -------------------------------  SCROLL BAR  -------------------------------*/
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.10);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ffbf69;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #fcad47;
+}
+
+/* ------------------------------- col-md settings  -------------------------------*/
+
+@media only screen and (max-width: 992px) {
+  .selectWrapper {
+    margin-left: 0px;
+    margin-bottom: 5px;
+  }
+  .selectBox {
+    font-size: 1.3rem;
+    padding-top: 5px;
+  }
+  .dropdown-toggle::after {
+    margin-top: 10px;
+  }
+  .button_box {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 5px;
+  }
+  .search-button {
+    margin-left: 0%;
+  }
+  .dropdown-filter {
+    display: inline;
+  }
+  .search-bar {
+    height: 200px;
+    background-color: #ffbf69;
+    border-radius: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+  }
+}
+
+/* -------------------------------  col-sm-settings  -------------------------------*/
+
+@media only screen and (max-width: 768px) {
+  .selectWrapper {
+    margin-left: 0%;
+  }
+  .search-button {
+    margin-left: 0%;
+  }
+}
+
+/* -------------------------------  col-xs-settings  -------------------------------*/
+
+@media only screen and (max-width: 576px) {
+  .selectWrapper {
+    margin-left: 0%;
+  }
+  .search-button {
+    margin-left: 0%;
+  }
+  .search-bar {
+    left: 10%;
+    width: 80%;
+  }
+  .search-results-text {
+    font-size: 1.3rem;
+    text-align: center;
+    margin-top: 5%;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .selectBox {
+    font-size: 0.95rem;
+    padding-top: 9px;
+  }
+  .search-results-text {
+    font-size: 1rem;
+  }
+}
