@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>proxi_mo</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="static/css/search.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/v4-shims.css">
+  
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="static/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="static/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="static/favicon/favicon-16x16.png">
+  <link rel="manifest" href="static/favicon/site.webmanifest">
+</head>
+
+<body>
+  <!-- Nav Bar -->
+
+  <nav class="navbar navbar-expand-xl">
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="nav navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link nav-selected">Procurar Estabelecimentos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Submeter Estabelecimento</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" target="_blank">Mais sobre COVID-19</a>
+        </li>
+      </ul>
+  </nav>
+
+    <!-- Page Content -->
+<div class="container" style="flex-wrap: wrap; flex-direction: column;margin-top: 10%;">
+    <div class="section">
+    <div class="row d-flex justify-content-center">
+      <div class="main_text_search">
+          Onde posso ir?
+      </div>
+    </div>
+    </div>
+
+    <div class="search-bar row justify-content-between">
+      <!-- Districts dropdown --> 
+      <div class="dropdown col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 selectWrapper">
+        <button id="districts" disabled class="btn dropdown-toggle selectBox d-flex justify-content-between" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Distritos
+        </button>
+        <ul id="districts_items" class="dropdown-menu scrollable-menu" role="menu"></ul>
+      </div>
+
+      <!-- Counties dropdown --> 
+      <div class="dropdown col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 selectWrapper">
+        <button id="counties" disabled class="selectBox btn dropdown-toggle d-flex justify-content-between" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Concelhos
+        </button>
+        <ul id="counties_items" class="dropdown-menu scrollable-menu" role="menu"></ul>
+      </div>
+
+      <!-- Filters dropdown --> 
+      <div class="dropdown col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 selectWrapper dropdown-filter">
+        <button class="selectBox btn dropdown-toggle d-flex justify-content-between" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Filtros
+        </button>
+      <ul id="filter_dropdown" class="dropdown-menu scrollable-menu" role="menu">
+        </ul>
+      </div> 
+
+      <div class="button_box col-xl-2  col-lg-2 col-md-12 col-sm-12 col-12">
+        <button id="search_button" class="btn search-button" onclick="loadSearch()" disabled>
+            <i class="search_button fas fa-angle-right fa-2x "></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  
+  
+  <!-- Footer -->
+  
+
+ 
+  <!-- Bootstrap core JavaScript -->
+  <script src="static/vendor/jquery/jquery.min.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Our JavaScript -->
+  <script src="static/js/search.js"></script>
+
+</body>
+
+</html>
