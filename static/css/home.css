@@ -1,0 +1,51 @@
+
+/* --------------------------------------------------------------------------------------*/
+/* -------------------------------  APPLIES TO HOME PAGE  -------------------------------*/
+/* --------------------------------------------------------------------------------------*/
+
+/* -------------------------------  BIG MAIN ELEMENTS  -------------------------------*/
+
+.home_section_title {
+  color: #ffbf69;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.home_section_description {
+  font-weight: bold;  
+  color: #979797;
+  font-size: large;
+}
+
+.home_section {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.home_button {
+  color: #717171;
+  transition: all 0.3s;
+  border: none;
+  background-color: white;
+  padding: 1rem;
+  width: 100%;
+  height: 150px;
+  font-weight: bold;
+  font-size: xx-large;
+  border-radius: 5rem;
+  box-shadow: 0 0 0.3em rgba(0,0,0,0.12), 0 0 0.3em rgba(0,0,0,0.24);
+}
+
+.home_button:hover {
+  background-color: #ffbf69;
+  color: white;
+}
+
+.home_icon {
+  width: 100px;
+}
+
+button:focus {
+  outline: none;
+}

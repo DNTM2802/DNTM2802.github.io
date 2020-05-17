@@ -18,7 +18,7 @@
 
   <!-- Custom styles for this template -->
   <link href="static/css/general.css" rel="stylesheet">
-  <link href="static/css/search_location.css" rel="stylesheet">
+  <link href="static/css/home.css" rel="stylesheet">
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="static/vendor/font-awesome/css/font-awesome.min.css">
@@ -49,47 +49,73 @@
       </ul>
   </nav>
 
+  <img style="position: fixed;" class="home_icon" src="static/img/location_icon.svg">
+
   <!-- Page Content -->
-  <div class="container" style="flex-wrap: wrap; flex-direction: column;margin-top: 10%;">
+  <div class="container" style="flex-wrap: wrap; flex-direction: column;margin-top: 6%;">
     <div class="row d-flex justify-content-center">
-      <div class="big_title">
-        Onde posso ir?
+      <div class="big_title" style="text-align: center;">
+        Em tempos de pandemia...<br>Onde posso ir?
       </div>
     </div>
-
-    <div class="search-bar row justify-content-between">
-      <!-- Districts dropdown -->
-      <div class="dropdown col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 selectWrapper">
-        <button id="districts" disabled class="btn dropdown-toggle selectBox d-flex justify-content-between"
-          type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Distrito
-        </button>
-        <ul id="districts_items" class="dropdown-menu scrollable-menu" role="menu"></ul>
+  </div>
+  <div class="">
+    <div class="row" style="text-align: center; margin-left: 10%; margin-right: 10%; margin-top: 50px;">
+      <div  class="col-sm home_section">
+        <div class="row">
+          <div class="col-12">
+            <img class="home_icon" src="static/img/location_icon.svg">
+          </div>
+          <div class="col-12">
+            <h4 class="home_section_title">
+              O que há à minha volta?
+            </h4>
+          </div>
+          <div class="col-12 home_section_description">
+            Descobre os estabelecimentos abertos na tua zona de residência e quem está a oferecer o quê.
+          </div>
+        </div>
       </div>
-
-      <!-- Counties dropdown -->
-      <div class="dropdown col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 selectWrapper">
-        <button id="counties" disabled class="selectBox btn dropdown-toggle d-flex justify-content-between"
-          type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Concelho
-        </button>
-        <ul id="counties_items" class="dropdown-menu scrollable-menu" role="menu"></ul>
+      <div class="col-sm home_section">
+        <div class="row">
+          <div class="col-12">
+            <img class="home_icon" src="static/img/store_icon.svg">
+          </div>
+          <div class="col-12">
+            <h4 class="home_section_title">
+              Procura por aquela loja!
+            </h4>
+          </div>
+          <div class="col-12 home_section_description">
+            Será que o supermercado da baixa está aberto? Procura um estabelecimento pelo nome e descobre!
+          </div>
+        </div>
       </div>
-
-      <!-- Filters dropdown -->
-      <div class="dropdown col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 selectWrapper dropdown-filter">
-        <button class="selectBox btn dropdown-toggle d-flex justify-content-between" type="button"
-          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Filtros
-        </button>
-        <ul id="filter_dropdown" class="dropdown-menu scrollable-menu" role="menu">
-        </ul>
+      <div class="col-sm home_section">
+        <div class="row">
+          <div class="col-12">
+            <img class="home_icon" src="static/img/help_icon.svg">
+          </div>
+          <div class="col-12">
+            <h4 class="home_section_title">
+              Dá a conhecer a tua zona!
+            </h4>
+          </div>
+          <div class="col-12 home_section_description">
+            Se conheces estabelecimentos abertos na tua zona e os serviços que estão a oferecer , submete-os na plataforma e ajuda a tua comunidade!
+          </div>
+        </div>
       </div>
-
-      <div class="button_box col-xl-2 col-lg-2 col-md-12 col-sm-12 col-12">
-        <button id="search_button" class="btn search-button" onclick="loadSearch()" disabled>
-          <i class="search_button fa fa-search fa-2x" aria-hidden="true"></i>
-        </button>
+    </div>
+    <div class="row" style="text-align: center; margin-left: 10%; margin-right: 10%; margin-top: 20px;">
+      <div  class="col-sm home_section">
+        <button type="button" class="home_button">À minha volta</button>
+      </div>
+      <div  class="col-sm home_section">
+        <button type="button" class="home_button">Procurar<br>estabelecimento</button>
+      </div>
+      <div  class="col-sm home_section">
+        <button type="button" class="home_button">Submeter o meu<br>negócio</button>
       </div>
     </div>
   </div>
