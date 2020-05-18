@@ -8,6 +8,8 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
+  <script src="jquery-3.5.1.min.js"></script>
+
   <title>covid19info</title>
 
   <!-- Bootstrap core CSS -->
@@ -17,11 +19,65 @@
   <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 
   <!-- Custom styles for this template -->
-  <link href="static/css/general.css" rel="stylesheet">
+  <!-- <link href="static/css/general.css" rel="stylesheet"> -->
   <link href="static/css/search_location.css" rel="stylesheet">
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="static/vendor/font-awesome/css/font-awesome.min.css">
+
+  <style>
+    .container {
+      justify-content: left;
+      background-color: #FFBF69;
+      -webkit-border-radius: 25px;
+      -moz-border-radius: 25px;
+      border-radius: 25px;
+    }
+    p{
+      color:white;
+      font-size: large;
+      font-weight: bold;
+    }
+    .btn {
+      background-color: white !important;
+      text-align: left;
+      border-radius: 15%;
+      color: black;
+      float: left;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      -webkit-border-radius: 50px;
+      -moz-border-radius: 50px;
+      border-radius: 50px;
+    }
+
+    .form-check-label{
+      color: white;
+    }
+
+    h5{
+      color: white;
+    }
+
+    .input {
+      -webkit-border-radius: 50px;
+      -moz-border-radius: 50px;
+      border-radius: 50px;
+    }
+
+    .btn-default{
+      border: 2px solid black;
+      background-color: white;
+      color: black;
+      padding: 14px 28px;
+      font-size: 16px;
+      cursor: pointer;
+      text-align: center;
+    }
+
+  </style>
 
 
 </head>
@@ -50,56 +106,376 @@
   </nav>
 
   <!-- Page Content -->
-  <div class="container" style="flex-wrap: wrap; flex-direction: column;margin-top: 10%;">
-    <div class="row d-flex justify-content-center">
-      <div class="big_title">
-        Onde posso ir?
+  <div class="container" style= "background-color: white;">
+    <p></p>
+  <h1>
+    Dá visibilidade ao teu negócio 
+    ou aos negócios à tua volta
+  </h1>
+</div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <p></p>
+        <p>Localização</p>
       </div>
     </div>
-
-    <div class="search-bar row justify-content-between">
-      <!-- Districts dropdown -->
-      <div class="dropdown col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 selectWrapper">
-        <button id="districts" disabled class="btn dropdown-toggle selectBox d-flex justify-content-between"
-          type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Distrito
-        </button>
-        <ul id="districts_items" class="dropdown-menu scrollable-menu" role="menu"></ul>
+    <div class="row">
+      <div class="col-6">
+        <div class="dropdown" id="dropdown1">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Distrito
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" id="distrito" href="#">Aveiro</a>
+          </div>
+        </div>
       </div>
-
-      <!-- Counties dropdown -->
-      <div class="dropdown col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 selectWrapper">
-        <button id="counties" disabled class="selectBox btn dropdown-toggle d-flex justify-content-between"
-          type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Concelho
-        </button>
-        <ul id="counties_items" class="dropdown-menu scrollable-menu" role="menu"></ul>
+      <div class="col-6">
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Concelho
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <a class="dropdown-item" href="#" id="cacia">Cacia</a>
+            <a class="dropdown-item" href="#" id="ilhavo">Ilhavo</a>
+          </div>
+        </div>
       </div>
-
-      <!-- Filters dropdown -->
-      <div class="dropdown col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 selectWrapper dropdown-filter">
-        <button class="selectBox btn dropdown-toggle d-flex justify-content-between" type="button"
-          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Filtros
-        </button>
-        <ul id="filter_dropdown" class="dropdown-menu scrollable-menu" role="menu">
-        </ul>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <p>Morada</p>
       </div>
-
-      <div class="button_box col-xl-2 col-lg-2 col-md-12 col-sm-12 col-12">
-        <button id="search_button" class="btn search-button" onclick="loadSearch()" disabled>
-          <i class="search_button fa fa-search fa-2x" aria-hidden="true"></i>
-        </button>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Ex: Rua dos Cravos 8,Cacém"
+            aria-label="Recipient's username" aria-describedby="basic-addon2" id="morada">
+        </div>
       </div>
     </div>
   </div>
+  <div>
+    <p></p>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <p></p>
+        <p>Informações gerais</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <p>Nome</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Ex: Supermercado Primavera"
+            aria-label="Recipient's username" aria-describedby="basic-addon2" id="nome">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <p>Categorias abrangidas</p>
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <p>O meu estabelecimento é do tipo...</p>
+            </div>
+          </div>
+          <div id="saude" class="filter-group">
+            <h5>Saúde</h5>
+            <div class="form-check form-check-saude">
+              <div class="form-check">
+                <input class="form-check-input checkbox" type="checkbox" value="farmacias" id="chk-farmacias">
+                <label class="form-check-label d-flex align-items-center" for="chk-farmacias">
+                  Farmácias
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input checkbox" type="checkbox" value="hospitais" id="chk-hospitais">
+                <label class="form-check-label d-flex align-items-center" for="chk-hospitais">
+                  Hospitais
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input checkbox" type="checkbox" value="c_saude" id="chk-c_saude">
+                <label class="form-check-label d-flex align-items-center" for="chk-c_saude">
+                  Centros de Saúde
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input checkbox" type="checkbox" value="clinicas" id="chk-clinicas">
+                <label class="form-check-label d-flex align-items-center" for="chk-clinicas">
+                  Clínicas
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input checkbox" type="checkbox" value="veterinarios" id="chk-veterinarios">
+                <label class="form-check-label d-flex align-items-center" for="chk-veterinarios">
+                  Veterinários
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <hr>
+
+          <div id="alimentacao" class="filter-group">
+            <h5>Alimentação</h5>
+            <div class="form-check form-check-alimentacao">
+              <div class="form-check">
+                <input class="form-check-input checkbox" type="checkbox" value="mercados" id="chk-mercados">
+                <label class="form-check-label d-flex align-items-center" for="chk-mercados">
+                  Mercados
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input checkbox" type="checkbox" value="talhos" id="chk-talhos">
+                <label class="form-check-label d-flex align-items-center" for="chk-talhos">
+                  Talhos
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input checkbox" type="checkbox" value="padarias" id="chk-padarias">
+                <label class="form-check-label d-flex align-items-center" for="chk-padarias">
+                  Padarias
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input checkbox" type="checkbox" value="restaurantes" id="chk-restaurantes">
+                <label class="form-check-label d-flex align-items-center" for="chk-restaurantes">
+                  Restaurantes
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <hr>
+
+          <div id="servicos" class="filter-group">
+            <h5>Serviços</h5>
+            <div class="form-check form-check-alimentacao">
+              <div class="form-check">
+                <input class="form-check-input checkbox" type="checkbox" value="lavandarias" id="chk-lavandarias">
+                <label class="form-check-label d-flex align-items-center" for="chk-lavandarias">
+                  Lavandarias
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input checkbox" type="checkbox" value="telecomunicacoes"
+                  id="chk-telecomunicacoes">
+                <label class="form-check-label d-flex align-items-center" for="chk-telecomunicacoes">
+                  Telecomunicações
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input checkbox" type="checkbox" value="combustiveis" id="chk-combustiveis">
+                <label class="form-check-label d-flex align-items-center" for="chk-combustiveis">
+                  Combustíveis
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input checkbox" type="checkbox" value="gas" id="chk-gas">
+                <label class="form-check-label d-flex align-items-center" for="chk-gas">
+                  Gás
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input checkbox" type="checkbox" value="oficinas" id="chk-oficinas">
+                <label class="form-check-label d-flex align-items-center" for="chk-oficinas">
+                  Oficinas
+                </label>
+              </div>
+            </div>
+          </div>
+          <hr>
+
+          <div id="servicos" class="filter-group">
+            <h5>Comodidades prestadas</h5>
+            <div class="form-check form-check-alimentacao">
+              <div class="form-check">
+                <input class="form-check-input checkbox" type="checkbox" value="EntregasEmCasa" id="chk-EntregasEmCasa">
+                <label class="form-check-label d-flex align-items-center" for="chk-EntregasEmCasa">
+                  Entregas em casa
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input checkbox" type="checkbox" value="EncomendasPorTelefone"
+                  id="chk-EncomendasPorTelefone">
+                <label class="form-check-label d-flex align-items-center" for="chk-EncomendasPorTelefone">
+                  Encomendas por telefone
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input checkbox" type="checkbox" value="TakeAway" id="chk-TakeAway">
+                <label class="form-check-label d-flex align-items-center" for="chk-TakeAway">
+                  Take-away
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input checkbox" type="checkbox" value="Outra" id="chk-Outra">
+                <label class="form-check-label d-flex align-items-center" for="chk-Outra">
+                  Outra
+                </label>
+              </div>
+              <input type="text" class="form-control" placeholder="Ex: Encomendas por Facebook"
+                    aria-label="Recipient's username" aria-describedby="basic-addon2" id="Outras">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <p>Imagem</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Adicionar ficheiro</span>
+                </div>
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" id="inputGroupFile01">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div>
+    <p></p>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <p></p>
+        <p>Contactos</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <p>Telefones</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="" aria-label="Recipient's username"
+            aria-describedby="basic-addon2" id="Telefone1">
+        </div>
+      </div>
+      <div class="col-6">
+        <input type="text" class="form-control" placeholder="" aria-label="Recipient's username"
+          aria-describedby="basic-addon2" id="Telefone2">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <p>Email</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder=""
+            aria-label="Recipient's username" aria-describedby="basic-addon2" id="Email">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4">
+        <p>Facebook</p>
+      </div>
+      <div class="col-4">
+        <p>Instagram</p>
+      </div>
+      <div class="col-4">
+        <p>Twitter</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4">
+        <input type="text" class="form-control" placeholder=""
+          aria-label="Recipient's username" aria-describedby="basic-addon2" id="Facebook">
+      </div>
+      <div class="col-4">
+        <input type="text" class="form-control" placeholder=""
+          aria-label="Recipient's username" aria-describedby="basic-addon2" id="Instagram">
+      </div>
+      <div class="col-4">
+        <input type="text" class="form-control" placeholder=""
+          aria-label="Recipient's username" aria-describedby="basic-addon2" id="Twitter">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <p>Website</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <input type="text" class="form-control" placeholder=""
+          aria-label="Recipient's username" aria-describedby="basic-addon2" id="Website">
+      </div>
+    </div>
+    <div class="row">
+      <p></p>
+    </div>
+  </div>
+  <div>
+    <p></p>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <p></p>
+        <p>Observações</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="form-group">
+          <textarea class="form-control" rows="5"
+            placeholder="Ex: Premanência máxima de 3 pessoas no estabelecimkento sendo que cada uma das pessoas terá um lugar predefinido e marcado mno estabelecimento" id="Obs"></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div>
+    <p></p>
+  </div>
+  <div class="container" style="background-color: white;">
+    <div class="row">
+      <div class="col-4"></div>
+      <div class="col-4">
+        <button type="button" id="submit"class="btn btn-default">Submeter negócio</button>
+      </div>
+      <div class="col-4"></div>
+    </div>
+  </div>
+  <div class="container">
+    <p></p>
+  </div>
+
 
   <!-- Bootstrap core JavaScript -->
   <script src="static/vendor/jquery/jquery.min.js"></script>
   <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Our JavaScript -->
-  <script src="static/js/search.js"></script>
+  <script src="static/js/submit.js"></script>
 
 </body>
 
