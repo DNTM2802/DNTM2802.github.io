@@ -68,6 +68,7 @@ $("#submit").click(function(){
     var ConSelected=$("#dropdownMenuButton1").text().trim(); 
     var morada = $("#morada").val(); 
     var Nome = $("#nome").val(); 
+    var horario =$("#horario").val();
     var categorias = new Array(); 
     noErrors=true; 
     var count=0; 
@@ -187,7 +188,7 @@ $("#submit").click(function(){
     if($("#nome").val().length <= 3){ 
         noErrors=false; 
     } 
-    if($("#horario").val().length <= 7){ 
+    if($("#horario").val().length < 5){ 
         noErrors=false; 
     } 
     if(count==0){ 
@@ -303,7 +304,7 @@ $("#submit").click(function(){
         $("#button").css("visibility","hidden"); 
         $("#Obrigado").css("visibility","visible"); 
         window.scrollTo(0,0); 
-        var object= {"Morada":morada,"Nome":Nome,"Id":id,"Categorias":categorias,"Comodidades":comodidades,"Telefones":Telefones,"email":email,"Facebook":Facebook,"Instagram":Instagram,"Twitter":Twitter,"WebSite":Website,"Obs":Obs}; 
+        var object= {"Morada":morada,"Nome":Nome,"Id":id,"Horario":horario,"Categorias":categorias,"Comodidades":comodidades,"Telefones":Telefones,"email":email,"Facebook":Facebook,"Instagram":Instagram,"Twitter":Twitter,"WebSite":Website,"Obs":Obs}; 
         var jsonObj=JSON.parse(localStorage.getItem(DistricSelected+ConSelected));
         console.log(localStorage.getItem(DistricSelected+ConSelected));
         jsonObj.push(object);
