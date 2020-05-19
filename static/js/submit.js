@@ -84,4 +84,12 @@ $("#submit").click(function(){
     var Obs= $("#Obs").val();
     var object= {"Morada":morada,"Nome":Nome,"Categorias":categorias,"Comodidades":comodidades,"Telefone1":Telefone1,"Telefone2":Telefone2,"email":email,"Facebook":Facebook,"Instagram":Instagram,"Twitter":Twitter,"WebSite":Website,"Obs":Obs};
     localStorage.setItem(DistricSelected+ConSelected,JSON.stringify(object));
+    $("#Localizacao").css("visibility","hidden");
+    $("#Titulo").css("visibility","hidden");
+    $("#Contactos").css("visibility","hidden");
+    $("#Info").css("visibility","hidden");
+    $("#Obs").css("visibility","hidden");
+    $("#button").css("visibility","hidden");
+    $("#Obrigado").css("visibility","visible");
+    
 });
