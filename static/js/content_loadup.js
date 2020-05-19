@@ -3,13 +3,17 @@ localStorage.clear();
 var AveiroCacia = []
 
 var rest1 = {
+    Id: randomInt(),
     Nome: 'O Transmontano',
+    Horario: '13h-19h',
     Morada: 'Rua dos Cravos 8',
     Categorias : [
         'restaurantes'
     ],
-    Telefone1 : 919191919,
-    Telefone2 : 919191919,
+    Comodidades : [
+        "TakeAway"
+    ],
+    Telefones : ['134253243','657588675'],
     email : 'duarte.ntm@ua.pt',
     Facebook : 'facevook.com/duarte',
     Instagram : 'instagram.com/duarte',
@@ -20,13 +24,18 @@ var rest1 = {
 }
 
 var rest2 = {
+    Id: randomInt(),
     Nome: 'Churrascaria Tavares',
+    Horario: '13h-19h',
     Morada: 'A morada da churrascaria',
     Categorias : [
         'restaurantes'
     ],
-    Telefone1 : 909090909,
-    Telefone2 : 939393939,
+    Comodidades : [
+        "TakeAway",
+        "EntregasPorTelefone"
+    ],
+    Telefones : ['134253243','657588675'],
     email : 'anibal.ntm@ua.pt',
     Facebook : 'facevook.com/anibal',
     Instagram : 'instagram.com/anibal',
@@ -37,13 +46,15 @@ var rest2 = {
 }
 
 var merc1 = {
+    Id: randomInt(),
     Nome: 'Pingo Doce',
+    Horario: '13h-19h',
     Morada: 'A morada do Pingo Doce',
     Categorias : [
         'mercados'
     ],
-    Telefone1 : 123143414,
-    Telefone2 : 536325125,
+    Comodidades : [],
+    Telefones : ['134253243','657588675'],
     email : 'pingo@ua.pt',
     Facebook : 'facevook.com/pingo',
     Instagram : 'instagram.com/pingo',
@@ -54,13 +65,15 @@ var merc1 = {
 }
 
 var merc2 = {
+    Id: randomInt(),
     Nome: 'Intermarche',
+    Horario: '13h-19h',
     Morada: 'A morada da intermarche',
     Categorias : [
         'mercados'
     ],
-    Telefone1 : 909090909,
-    Telefone2 : 939393939,
+    Comodidades : [],
+    Telefones : ['134253243','657588675'],
     email : 'intermarche@ua.pt',
     Facebook : 'facevook.com/intermarche',
     Instagram : 'instagram.com/intermarche',
@@ -82,13 +95,15 @@ localStorage.setItem("AveiroCacia", json_string);
 var AveiroIlhavo = []
 
 var comb1 = {
+    Id: randomInt(),
     Nome: 'Galp Ílhavo',
+    Horario: '13h-19h',
     Morada: 'Morada da Galp de Ílhavo',
     Categorias : [
         'combustiveis'
     ],
-    Telefone1 : 456789008,
-    Telefone2 : 098765435,
+    Comodidades : [],
+    Telefones : ['134253243','657588675'],
     email : 'galpilhavo@ua.pt',
     Facebook : 'facevook.com/galpilhavo',
     Instagram : 'instagram.com/galpilhavo',
@@ -99,13 +114,15 @@ var comb1 = {
 }
 
 var comb2 = {
+    Id: randomInt(),
     Nome: 'Prio Ílhavo',
+    Horario: '13h-19h',
     Morada: 'A morada da da Prio de Ílhavo',
     Categorias : [
         'combustiveis'
     ],
-    Telefone1 : 909090909,
-    Telefone2 : 939393939,
+    Comodidades : [],
+    Telefones : ['134253243','657588675'],
     email : 'prioilhavo@ua.pt',
     Facebook : 'facevook.com/prioilhavo',
     Instagram : 'instagram.com/prioilhavo',
@@ -116,13 +133,15 @@ var comb2 = {
 }
 
 var pad1 = {
+    Id: randomInt(),
     Nome: 'Padaria Rosa',
+    Horario: '13h-19h',
     Morada: 'A morada da Padaria Rosa',
     Categorias : [
         'padarias'
     ],
-    Telefone1 : 123143414,
-    Telefone2 : 536325125,
+    Comodidades : [],
+    Telefones : ['134253243','657588675'],
     email : 'pardariarosa@ua.pt',
     Facebook : 'facevook.com/pardariarosa',
     Instagram : 'instagram.com/pardariarosa',
@@ -133,13 +152,15 @@ var pad1 = {
 }
 
 var pad2 = {
+    Id: randomInt(),
     Nome: 'Padaria do Catarino',
+    Horario: '13h-19h',
     Morada: 'A morada da Padaria do Catarino',
     Categorias : [
         'padarias'
     ],
-    Telefone1 : 134253243,
-    Telefone2 : 657588675,
+    Comodidades : [],
+    Telefones : ['134253243','657588675'],
     email : 'padariacatarino@ua.pt',
     Facebook : 'facevook.com/padariacatarino',
     Instagram : 'instagram.com/padariacatarino',
@@ -159,3 +180,6 @@ var json_string_avilhavo = JSON.stringify(AveiroIlhavo);
 localStorage.setItem("AveiroIlhavo", json_string_avilhavo);
 
 
+function randomInt() { // min and max included 
+    return Math.floor(Math.random() * (999999 - 100000 + 1) + 100000);
+}
