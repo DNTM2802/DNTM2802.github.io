@@ -4,7 +4,25 @@ $( document ).ready(function() {
     $("#horarioalert").show(); 
 }); 
  
- 
+function createUUID() {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+       var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+       return v.toString(16);
+    });
+}
+
+function getBase64Image(img) {
+    var canvas = document.createElement("canvas");
+    canvas.width = img.width;
+    canvas.height = img.height;
+    console.log(img.width)
+    var ctx = canvas.getContext("2d");
+    ctx.drawImage(img, 0, 0);
+
+    var dataURL = canvas.toDataURL("image/png");
+
+    return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
+}
  
 $("#distrito").click(function(){ 
     $("#dropdownMenuButton").text("Aveiro"); 
@@ -123,15 +141,20 @@ $("#submit").click(function(){
     if ($('#chk-Outras').is(':checked')) { 
         categorias.push($("#Outras").val()) 
     } 
+    var Telefones = new Array();
     var Telefone1 = $("#Telefone1").val(); 
-    var Telefone2 = $("#Telefone2").val(); 
+    var Telefone2 = $("#Telefone2").val();
+    Telefones.push(Telefone1); 
+    Telefones.push(Telefone2);
     var email = $("#Email").val(); 
-    var image= getBase64Image($("#inputGroupFile01")); 
+    // console.log($("#customFile").prop('files')[0])
+    // var image= getBase64Image($("#customFile").prop('files')[0]); 
     var Facebook = $("#Facebook").val(); 
     var Instagram = $("#Instagram").val(); 
     var Twitter = $("#Twitter").val(); 
     var Website = $("#Website").val(); 
     var Obs= $("#Obs").val(); 
+    var id = createUUID();
     if(DistricSelected==="Distrito"){ 
         if ($("#alert1").length == 0){ 
             var toAppend= '<div class="alert alert-warning" role="alert" id="alert1" style="visibility: visible;">Distrito Invalido</div>'; 
@@ -272,7 +295,7 @@ $("#submit").click(function(){
         $("#alert10").hide(); 
     } 
     if(noErrors){ 
-        $("#Localizacao").css("visibility","hidden"); 
+        $("#Localizacao").css("visibility","hidden");
         $("#Titulo").css("visibility","hidden"); 
         $("#Contactos").css("visibility","hidden"); 
         $("#Info").css("visibility","hidden"); 
@@ -280,7 +303,11 @@ $("#submit").click(function(){
         $("#button").css("visibility","hidden"); 
         $("#Obrigado").css("visibility","visible"); 
         window.scrollTo(0,0); 
-        var object= {"Morada":morada,"Nome":Nome,"Categorias":categorias,"Comodidades":comodidades,"Imagem":Image,"Telefone1":Telefone1,"Telefone2":Telefone2,"email":email,"Facebook":Facebook,"Instagram":Instagram,"Twitter":Twitter,"WebSite":Website,"Obs":Obs}; 
-        localStorage.setItem(DistricSelected+ConSelected,JSON.stringify(object)); 
-    } 
+        var object= {"Morada":morada,"Nome":Nome,"Id":id,"Categorias":categorias,"Comodidades":comodidades,"Imagem":image,"Telefones":Telefones,"email":email,"Facebook":Facebook,"Instagram":Instagram,"Twitter":Twitter,"WebSite":Website,"Obs":Obs}; 
+        var jsonObj=JSON.parse(localStorage.getItem(DistricSelected+ConSelected));
+        console.log(localStorage.getItem(DistricSelected+ConSelected));
+        jsonObj.push(object);
+        localStorage.setItem(DistricSelected+ConSelected,JSON.stringify(jsonObj));
+    }
+    window.scrollTo(0,0); 
 });
