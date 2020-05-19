@@ -303,10 +303,11 @@ $("#submit").click(function(){
         $("#button").css("visibility","hidden"); 
         $("#Obrigado").css("visibility","visible"); 
         window.scrollTo(0,0); 
-        var object= {"Morada":morada,"Nome":Nome,"Id":id,"Categorias":categorias,"Comodidades":comodidades,"Imagem":image,"Telefones":Telefones,"email":email,"Facebook":Facebook,"Instagram":Instagram,"Twitter":Twitter,"WebSite":Website,"Obs":Obs}; 
+        var object= {"Morada":morada,"Nome":Nome,"Id":id,"Categorias":categorias,"Comodidades":comodidades,"Telefones":Telefones,"email":email,"Facebook":Facebook,"Instagram":Instagram,"Twitter":Twitter,"WebSite":Website,"Obs":Obs}; 
         var jsonObj=JSON.parse(localStorage.getItem(DistricSelected+ConSelected));
         console.log(localStorage.getItem(DistricSelected+ConSelected));
         jsonObj.push(object);
+        console.log("ai e tal tou aqui")
         localStorage.setItem(DistricSelected+ConSelected,JSON.stringify(jsonObj));
     }
     window.scrollTo(0,0); 
