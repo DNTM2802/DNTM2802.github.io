@@ -8,6 +8,8 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
+  <script src="jquery-3.5.1.min.js"></script>
+
   <title>covid19info</title>
 
   <!-- Bootstrap core CSS -->
@@ -52,7 +54,7 @@
   <!-- Page Content -->
   <div class="container" style="flex-wrap: wrap; flex-direction: column;margin-top: 10%;">
     <div class="row d-flex justify-content-center">
-      <div class="big_title">
+      <div class="big_title" style="margin-bottom: 5%">
         Onde posso ir?
       </div>
     </div>
@@ -60,20 +62,25 @@
     <div class="search-bar row justify-content-between">
       <!-- Districts dropdown -->
       <div class="dropdown col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 selectWrapper">
-        <button id="districts" disabled class="btn dropdown-toggle selectBox d-flex justify-content-between"
+        <button id="dropdownMenuButton" class="btn dropdown-toggle selectBox d-flex justify-content-between"
           type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Distrito
         </button>
-        <ul id="districts_items" class="dropdown-menu scrollable-menu" role="menu"></ul>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" id="aveiro" href="#">Aveiro</a>
+          </div>
       </div>
 
       <!-- Counties dropdown -->
       <div class="dropdown col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 selectWrapper">
-        <button id="counties" disabled class="selectBox btn dropdown-toggle d-flex justify-content-between"
+        <button id="dropdownMenuButton1" class="selectBox btn dropdown-toggle d-flex justify-content-between"
           type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Concelho
         </button>
-        <ul id="counties_items" class="dropdown-menu scrollable-menu" role="menu"></ul>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <a class="dropdown-item" id="cacia" href="#">Cacia</a>
+            <a class="dropdown-item" id="ilhavo" href="#">Ilhavo</a>
+          </div>
       </div>
 
       <!-- Filters dropdown -->
@@ -87,7 +94,7 @@
       </div>
 
       <div class="button_box col-xl-2 col-lg-2 col-md-12 col-sm-12 col-12">
-        <button id="search_button" class="btn search-button" onclick="loadSearch()" disabled>
+        <button id="search_button" class="btn search-button" onclick="loadSearch()">
           <i class="search_button fa fa-search fa-2x" aria-hidden="true"></i>
         </button>
       </div>
