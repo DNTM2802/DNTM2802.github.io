@@ -4,7 +4,7 @@ var selected_id = -1;
 // Get URL paramter location
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
-const location_estab = urlParams.get('location');
+const location_estab = urlParams.get('local');
 console.log(location_estab);
 
 var estab_obj = JSON.parse(localStorage.getItem(String(location_estab)))
