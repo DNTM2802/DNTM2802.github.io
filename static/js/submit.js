@@ -307,6 +307,7 @@ $("#submit").click(function(){
         var jsonObj=JSON.parse(localStorage.getItem(DistricSelected+ConSelected));
         console.log(localStorage.getItem(DistricSelected+ConSelected));
         jsonObj.push(object);
+        console.log("ai e tal tou aqui")
         localStorage.setItem(DistricSelected+ConSelected,JSON.stringify(jsonObj));
     }
     window.scrollTo(0,0); 
