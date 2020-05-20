@@ -220,6 +220,10 @@ body {
   border-radius: 25px;
 }
 
+label {
+  cursor: pointer;
+}
+
 /* ------------------------------- col-md settings  -------------------------------*/
 
 @media only screen and (max-width: 992px) {
