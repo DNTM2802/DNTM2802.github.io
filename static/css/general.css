@@ -53,6 +53,7 @@ body {
 .nav-item {
   font-size: 1.5rem;
   color: #707070;
+  cursor: pointer;
 }
 
 .ml-auto {
@@ -212,7 +213,12 @@ body {
   opacity: .5;
 }
 
+/*-------------------------- ALERTS ----------------------------------*/
 
+.alert {
+  border: none;
+  border-radius: 25px;
+}
 
 /* ------------------------------- col-md settings  -------------------------------*/
 
