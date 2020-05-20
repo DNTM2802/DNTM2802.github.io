@@ -89,6 +89,11 @@ footer i.fa-instagram{
   padding-top: 9px;
   padding-bottom: 20px;
 }
+
+#dropdownMenuButton1:focus, #dropdownMenuButton:focus {
+  outline: none;
+  box-shadow:none;
+}
 /* ! ======================================================================================== */
 
 /* ! ====================================== DropDown ====================================== */
