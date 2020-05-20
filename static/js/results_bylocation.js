@@ -356,6 +356,7 @@ function loadDetails(id) {
 }
 
 function filters(){
+    $("#details").hide();
     var filtros = document.getElementById("filtros_chk");
     var checked = filtros.getElementsByTagName("INPUT");
     var flag = false;
