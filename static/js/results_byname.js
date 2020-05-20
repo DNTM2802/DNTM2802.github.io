@@ -379,9 +379,9 @@ function filters() {
     if (flag) {
         for (var i = 0; i < checked.length; i++) {
             if (checked[i].checked) {
-                for (var k = 0; k < estab_obj.length; k++) {
-                    if (estab_obj[k]["Categorias"] == checked[i].value) {
-                        var resultados = results.getElementsByClassName(estab_obj[k]["Categorias"]);
+                for (var k = 0; k < obj_arr.length; k++) {
+                    if (obj_arr[k]["Categorias"] == checked[i].value) {
+                        var resultados = results.getElementsByClassName(obj_arr[k]["Categorias"]);
                         for (var j = 0; j < resultados.length; j++) {
                             resultados[j].style.display = "";
                         }
@@ -389,9 +389,9 @@ function filters() {
                 }
             }
             else {
-                for (var k = 0; k < estab_obj.length; k++) {
-                    if (estab_obj[k]["Categorias"] == checked[i].value) {
-                        var resultados = results.getElementsByClassName(estab_obj[k]["Categorias"]);
+                for (var k = 0; k < obj_arr.length; k++) {
+                    if (obj_arr[k]["Categorias"] == checked[i].value) {
+                        var resultados = results.getElementsByClassName(obj_arr[k]["Categorias"]);
                         for (var j = 0; j < resultados.length; j++) {
                             resultados[j].style.display = "none";
                         }
