@@ -446,7 +446,7 @@ function filters(){
     var checked = filtros.getElementsByTagName("INPUT");
     var flag = false;
     var count = 0;
-    for(var x = 0;x < checked.length; x++){
+    for(var x = 0; x < checked.length; x++){
         if (checked[x].checked){
             flag = true;
         }
