@@ -18,7 +18,7 @@ for (var n = 0; n < localStorage.length; n++) {
         }
     }
 }
-
+console.log(obj_arr);
 for (var k = 0; k < obj_arr.length; k++) {
     results.appendChild(generate_card(obj_arr[k]));
 }
@@ -278,9 +278,9 @@ function loadDetails(id) {
 
     var this_card = {};
     var found = false;
-    for (var k = 0; k < estab_obj.length; k++) {
-        if (estab_obj[k]["Id"] == id) {
-            this_card = estab_obj[k];
+    for (var k = 0; k < obj_arr.length; k++) {
+        if (obj_arr[k]["Id"] == id) {
+            this_card = obj_arr[k];
             found = true;
             break;
         };

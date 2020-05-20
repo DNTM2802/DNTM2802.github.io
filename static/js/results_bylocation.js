@@ -284,7 +284,7 @@ function loadDetails(id) {
         /* Get the results div. */
         var results = document.getElementById('results');
         var childnodes = results.childNodes;
-
+        
         /* If the there is a previou selected div. */
         if (selected_id != -1) {
             /* Remove the details from the results div. */
@@ -296,8 +296,6 @@ function loadDetails(id) {
                     childnodes[k].childNodes[1].classList.remove("card-clicked");
                 }
             }
-
-
         }
 
         /* If the new id is different from the previous id (clicked on a new card). */
