@@ -1,24 +1,30 @@
 var selected_id = -1;
 
-
 // Get URL paramter location
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
-const location_estab = urlParams.get('local');
-console.log(location_estab);
+var location_estab = urlParams.get('name');
+location_estab = String(location_estab);
+location_estab = location_estab.replace(/\s/g, '').toLowerCase();
+var obj_arr = [];
 
-var estab_obj = JSON.parse(localStorage.getItem(String(location_estab)))
-console.log("Objeto:");
-console.log(estab_obj)
+// Search by name
+for (var n = 0; n < localStorage.length; n++) {
+    var estab_obj = JSON.parse(localStorage.getItem(localStorage.key(n)))
+    for (var k = 0; k < estab_obj.length; k++) {
+        var this_nome = estab_obj[k]["Nome"].replace(/\s/g, '').toLowerCase();
+        if (this_nome.search(location_estab) != -1) {
+            obj_arr.push(estab_obj[k]);
+        }
+    }
+}
 
-for (var k = 0; k < estab_obj.length; k++) {
-    //console.log(estab_obj[k]);
-    results.appendChild(generate_card(estab_obj[k]));
+for (var k = 0; k < obj_arr.length; k++) {
+    results.appendChild(generate_card(obj_arr[k]));
 }
 
 
 function generate_card(estab_obj) {
-    console.log("hey");
     /* Div that contains the card. */
     var card_div = document.createElement('div');
     card_div.classList.add('col-xl-4');
@@ -77,7 +83,7 @@ function generate_card(estab_obj) {
     card_div.appendChild(img);
     card_div.appendChild(info_div);
 
-    
+
 
     return card_div;
 }
@@ -122,7 +128,7 @@ function generate_details(this_card) {
     text_address.innerHTML += this_card["Horario"];
     schedule.appendChild(text_address);
 
-    
+
     info1_div.appendChild(schedule);
     info1_div.appendChild(address);
 
@@ -151,9 +157,9 @@ function generate_details(this_card) {
     var delevery = document.createElement("span");
 
     var comodities = this_card["Comodidades"];
-    
+
     delevery.innerHTML += "<p><b>Serviços Disponíveis</b></p>";
-    
+
     if (comodities.indexOf("EntregasEmCasa") > -1) {
         delevery.innerHTML += '<img style="width:25px" src="static/img/comodity_yes.svg">';
     } else {
@@ -161,7 +167,7 @@ function generate_details(this_card) {
     }
     delevery.innerHTML += "<p style='display:inline'> Entregas ao Domicílio</p><br><br>";
 
-    
+
     if (comodities.indexOf("EntregasPorTelefone") > -1) {
         delevery.innerHTML += '<img style="width:25px" src="static/img/comodity_yes.svg">';
     } else {
@@ -169,7 +175,7 @@ function generate_details(this_card) {
     }
     delevery.innerHTML += "<p style='display:inline'> Encomendas por telefone</p><br><br>";
 
-    
+
     if (comodities.indexOf("TakeAway") > -1) {
         delevery.innerHTML += '<img style="width:25px" src="static/img/comodity_yes.svg">';
     } else {
@@ -326,7 +332,7 @@ function loadDetails(id) {
             else if (document.getElementsByTagName('body')[0].clientWidth < 1200) {
                 for (i = 0; i < childnodes.length; i++) {
                     if (id == childnodes[i].id) {
-                        while (((i-1) % 2) != 1) {
+                        while (((i - 1) % 2) != 1) {
                             i++;
                         }
                         results.insertBefore(generate_details(this_card), childnodes[i + 1]);
@@ -336,10 +342,9 @@ function loadDetails(id) {
             }
             /* > 1200 -> three results per row -> detail card is placed after the last card of that row. */
             else {
-                console.log(childnodes);
                 for (i = 0; i < childnodes.length; i++) {
                     if (id == childnodes[i].id) {
-                        while (((i-1) % 3) != 2) {
+                        while (((i - 1) % 3) != 2) {
                             i++;
                         }
                         results.insertBefore(generate_details(this_card), childnodes[i + 1]);
@@ -360,45 +365,45 @@ function loadDetails(id) {
 
 }
 
-function filters(){
+function filters() {
     var filtros = document.getElementById("filtros_chk");
     var checked = filtros.getElementsByTagName("INPUT");
     var flag = false;
     var count = 0;
-    for(var x = 0; x < checked.length; x++){
-        if (checked[x].checked){
+    for (var x = 0; x < checked.length; x++) {
+        if (checked[x].checked) {
             flag = true;
         }
     }
 
-    if(flag){
-        for (var i = 0 ; i < checked.length; i++) {
-                if (checked[i].checked){
-                    for(var k = 0; k < estab_obj.length; k++){
-                        if(estab_obj[k]["Categorias"] == checked[i].value){
-                            var resultados = results.getElementsByClassName(estab_obj[k]["Categorias"]);
-                            for( var j = 0; j < resultados.length; j++){
-                                resultados[j].style.display = "";
-                            }
+    if (flag) {
+        for (var i = 0; i < checked.length; i++) {
+            if (checked[i].checked) {
+                for (var k = 0; k < estab_obj.length; k++) {
+                    if (estab_obj[k]["Categorias"] == checked[i].value) {
+                        var resultados = results.getElementsByClassName(estab_obj[k]["Categorias"]);
+                        for (var j = 0; j < resultados.length; j++) {
+                            resultados[j].style.display = "";
                         }
                     }
                 }
-                else{
-                    for(var k = 0; k < estab_obj.length; k++){
-                        if(estab_obj[k]["Categorias"] == checked[i].value){
-                            var resultados = results.getElementsByClassName(estab_obj[k]["Categorias"]);
-                            for( var j = 0; j < resultados.length; j++){
-                                resultados[j].style.display = "none";
-                            }
+            }
+            else {
+                for (var k = 0; k < estab_obj.length; k++) {
+                    if (estab_obj[k]["Categorias"] == checked[i].value) {
+                        var resultados = results.getElementsByClassName(estab_obj[k]["Categorias"]);
+                        for (var j = 0; j < resultados.length; j++) {
+                            resultados[j].style.display = "none";
                         }
                     }
+                }
 
-                }
+            }
         }
     }
-    else{
+    else {
         var todos = results.getElementsByTagName("div");
-        for(var i = 0; i < todos.length; i++){
+        for (var i = 0; i < todos.length; i++) {
             todos[i].style.display = "";
         }
     }
