@@ -48,6 +48,12 @@
   <!-- =============================== Filtros =============================== -->
   <div id="searchbar_container" class="container">
 
+    <div class="row d-flex justify-content-center">
+      <div class="big_title" style="margin-bottom: 5%">
+        O que há à minha volta?
+      </div>
+    </div>
+
     <div class="search-bar row justify-content-between">
       <!-- Districts dropdown -->
       <div class="dropdown col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 selectWrapper">
@@ -108,35 +114,40 @@
             <div id="saude" class="filter-group">
               <h5>Saúde</h5>
               <div class="form-check form-check-saude">
-                <div class="form-check">
-                  <input class="form-check-input checkbox" type="checkbox" value="farmacias" id="chk-farmacias" onchange="filters()">
-                  <label class="form-check-label d-flex align-items-center" for="chk-farmacias">
-                    Farmácias
-                  </label>
+                <div class="checkbox">
+                  <label>
+                   <input type="checkbox" onchange="filters()" value="farmacias" id="chk-farmacias">
+                   <span class="cr"><i class="cr-icon fa fa-check fa-inverse"></i></span>
+                   Farmácias
+                   </label>
                 </div>
-                <div class="form-check">
-                  <input class="form-check-input checkbox" type="checkbox" value="hospitais" id="chk-hospitais" onchange="filters()">
-                  <label class="form-check-label d-flex align-items-center" for="chk-hospitais">
-                    Hospitais
-                  </label>
+                <div class="checkbox">
+                  <label>
+                   <input type="checkbox" onchange="filters()" value="hospitais" id="chk-hospitais">
+                   <span class="cr"><i class="cr-icon fa fa-check fa-inverse"></i></span>
+                   Hospitais
+                   </label>
                 </div>
-                <div class="form-check">
-                  <input class="form-check-input checkbox" type="checkbox" value="c_saude" id="chk-c_saude" onchange="filters()">
-                  <label class="form-check-label d-flex align-items-center" for="chk-c_saude">
-                    Centros de Saúde
-                  </label>
+                <div class="checkbox">
+                  <label>
+                   <input type="checkbox" onchange="filters()" value="c_saude" id="chk-c_saude">
+                   <span class="cr"><i class="cr-icon fa fa-check fa-inverse"></i></span>
+                   Centros de Saúde
+                   </label>
                 </div>
-                <div class="form-check">
-                  <input class="form-check-input checkbox" type="checkbox" value="clinicas" id="chk-clinicas" onchange="filters()">
-                  <label class="form-check-label d-flex align-items-center" for="chk-clinicas">
-                    Clínicas
-                  </label>
+                <div class="checkbox">
+                  <label>
+                   <input type="checkbox" onchange="filters()" value="clinicas" id="chk-clinicas">
+                   <span class="cr"><i class="cr-icon fa fa-check fa-inverse"></i></span>
+                   Clínicas
+                   </label>
                 </div>
-                <div class="form-check">
-                  <input class="form-check-input checkbox" type="checkbox" value="veterinarios" id="chk-veterinarios" onchange="filters()">
-                  <label class="form-check-label d-flex align-items-center" for="chk-veterinarios">
-                    Veterinários
-                  </label>
+                <div class="checkbox">
+                  <label>
+                   <input type="checkbox" onchange="filters()" value="veterinarios" id="chk-veterinarios">
+                   <span class="cr"><i class="cr-icon fa fa-check fa-inverse"></i></span>
+                   Veterinários
+                   </label>
                 </div>
               </div>
             </div>
@@ -146,29 +157,34 @@
             <div id="alimentacao" class="filter-group">
               <h5>Alimentação</h5>
               <div class="form-check form-check-alimentacao">
-                <div class="form-check">
-                  <input class="form-check-input checkbox" type="checkbox" value="mercados" id="chk-mercados" onchange="filters()">
-                  <label class="form-check-label d-flex align-items-center" for="chk-mercados">
-                    Mercados
-                  </label>
+                
+                <div class="checkbox">
+                  <label>
+                   <input type="checkbox" onchange="filters()" value="mercados" id="chk-mercados">
+                   <span class="cr"><i class="cr-icon fa fa-check fa-inverse"></i></span>
+                   Mercados
+                   </label>
                 </div>
-                <div class="form-check">
-                  <input class="form-check-input checkbox" type="checkbox" value="talhos" id="chk-talhos" onchange="filters()">
-                  <label class="form-check-label d-flex align-items-center" for="chk-talhos">
-                    Talhos
-                  </label>
+                <div class="checkbox">
+                  <label>
+                   <input type="checkbox" onchange="filters()" value="talhos" id="chk-talhos">
+                   <span class="cr"><i class="cr-icon fa fa-check fa-inverse"></i></span>
+                   Talhos
+                   </label>
                 </div>
-                <div class="form-check">
-                  <input class="form-check-input checkbox" type="checkbox" value="padarias" id="chk-padarias" onchange="filters()">
-                  <label class="form-check-label d-flex align-items-center" for="chk-padarias">
-                    Padarias
-                  </label>
+                <div class="checkbox">
+                  <label>
+                   <input type="checkbox" onchange="filters()" value="padarias" id="chk-padarias">
+                   <span class="cr"><i class="cr-icon fa fa-check fa-inverse"></i></span>
+                   Padarias
+                   </label>
                 </div>
-                <div class="form-check">
-                  <input class="form-check-input checkbox" type="checkbox" value="restaurantes" id="chk-restaurantes" onchange="filters()">
-                  <label class="form-check-label d-flex align-items-center" for="chk-restaurantes">
-                    Restaurantes
-                  </label>
+                <div class="checkbox">
+                  <label>
+                   <input type="checkbox" onchange="filters()" value="restaurantes" id="chk-restaurantes">
+                   <span class="cr"><i class="cr-icon fa fa-check fa-inverse"></i></span>
+                   Restaurantes
+                   </label>
                 </div>
               </div>
             </div>
@@ -178,35 +194,41 @@
             <div id="servicos" class="filter-group">
               <h5>Serviços</h5>
               <div class="form-check form-check-alimentacao">
-                <div class="form-check">
-                  <input class="form-check-input checkbox" type="checkbox" value="lavandarias" id="chk-lavandarias" onchange="filters()">
-                  <label class="form-check-label d-flex align-items-center" for="chk-lavandarias">
-                    Lavandarias
-                  </label>
+                
+                <div class="checkbox">
+                  <label>
+                   <input type="checkbox" onchange="filters()" value="lavandarias" id="chk-lavandarias">
+                   <span class="cr"><i class="cr-icon fa fa-check fa-inverse"></i></span>
+                   Lavandarias
+                   </label>
                 </div>
-                <div class="form-check">
-                  <input class="form-check-input checkbox" type="checkbox" value="telecomunicacoes" id="chk-telecomunicacoes" onchange="filters()">
-                  <label class="form-check-label d-flex align-items-center" for="chk-telecomunicacoes">
-                    Telecomunicações
-                  </label>
+                <div class="checkbox">
+                  <label>
+                   <input type="checkbox" onchange="filters()" value="telecomunicacoes" id="chk-telecomunicacoes">
+                   <span class="cr"><i class="cr-icon fa fa-check fa-inverse"></i></span>
+                   Telecomunicações
+                   </label>
                 </div>
-                <div class="form-check">
-                  <input class="form-check-input checkbox" type="checkbox" value="combustiveis" id="chk-combustiveis" onchange="filters()">
-                  <label class="form-check-label d-flex align-items-center" for="chk-combustiveis">
-                    Combustíveis
-                  </label>
+                <div class="checkbox">
+                  <label>
+                   <input type="checkbox" onchange="filters()" value="combustiveis" id="chk-combustiveis">
+                   <span class="cr"><i class="cr-icon fa fa-check fa-inverse"></i></span>
+                   Combustíveis
+                   </label>
                 </div>
-                <div class="form-check">
-                  <input class="form-check-input checkbox" type="checkbox" value="gas" id="chk-gas" onchange="filters()">
-                  <label class="form-check-label d-flex align-items-center" for="chk-gas">
-                    Gás
-                  </label>
+                <div class="checkbox">
+                  <label>
+                   <input type="checkbox" onchange="filters()" value="gas" id="chk-gas">
+                   <span class="cr"><i class="cr-icon fa fa-check fa-inverse"></i></span>
+                   Gás
+                   </label>
                 </div>
-                <div class="form-check">
-                  <input class="form-check-input checkbox" type="checkbox" value="oficinas" id="chk-oficinas" onchange="filters()">
-                  <label class="form-check-label d-flex align-items-center" for="chk-oficinas">
-                    Oficinas
-                  </label>
+                <div class="checkbox">
+                  <label>
+                   <input type="checkbox" onchange="filters()" value="oficinas" id="chk-oficinas">
+                   <span class="cr"><i class="cr-icon fa fa-check fa-inverse"></i></span>
+                   Oficinas
+                   </label>
                 </div>
               </div>
             </div>

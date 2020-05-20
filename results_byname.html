@@ -48,8 +48,13 @@
   <!-- =============================== Filtros =============================== -->
   <div id="searchbar_container" class="container">
 
-    <div class="search-bar row justify-content-between">
+    <div class="row d-flex justify-content-center">
+      <div class="big_title" style="margin-bottom: 5%">
+        Estará aberto...?
+      </div>
+    </div>
 
+    <div class="search-bar row justify-content-between">
       <!-- Counties dropdown -->
       <div class="input-group col-xl-10 col-lg-10 col-md-12 col-sm-12 col-12 selectWrapper">
         <input id="counties" class="form-control selectBox d-flex justify-content-between" type="text"
@@ -85,7 +90,7 @@
     <div class="row card-holder justify-content-center">
 
       <!-- =============================== Filtros-Selecionaveis =============================== -->
-      <div class="col-xl-3 col-lg-3 select-filters">
+      <div class="col-xl-3 col-lg-3 select-filters" id=filtros_chk>
         <h4 class="select-title"><b>Serviços</b></h6>
           <hr>
           <div class="list-group" id="filters">
@@ -93,33 +98,38 @@
             <div id="saude" class="filter-group">
               <h5>Saúde</h5>
               <div class="form-check form-check-saude">
-                <div class="form-check">
-                  <input class="form-check-input checkbox" type="checkbox" value="farmacias" id="chk-farmacias">
-                  <label class="form-check-label d-flex align-items-center" for="chk-farmacias">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" onchange="filters()" value="farmacias" id="chk-farmacias">
+                    <span class="cr"><i class="cr-icon fa fa-check fa-inverse"></i></span>
                     Farmácias
                   </label>
                 </div>
-                <div class="form-check">
-                  <input class="form-check-input checkbox" type="checkbox" value="hospitais" id="chk-hospitais">
-                  <label class="form-check-label d-flex align-items-center" for="chk-hospitais">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" onchange="filters()" value="hospitais" id="chk-hospitais">
+                    <span class="cr"><i class="cr-icon fa fa-check fa-inverse"></i></span>
                     Hospitais
                   </label>
                 </div>
-                <div class="form-check">
-                  <input class="form-check-input checkbox" type="checkbox" value="c_saude" id="chk-c_saude">
-                  <label class="form-check-label d-flex align-items-center" for="chk-c_saude">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" onchange="filters()" value="c_saude" id="chk-c_saude">
+                    <span class="cr"><i class="cr-icon fa fa-check fa-inverse"></i></span>
                     Centros de Saúde
                   </label>
                 </div>
-                <div class="form-check">
-                  <input class="form-check-input checkbox" type="checkbox" value="clinicas" id="chk-clinicas">
-                  <label class="form-check-label d-flex align-items-center" for="chk-clinicas">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" onchange="filters()" value="clinicas" id="chk-clinicas">
+                    <span class="cr"><i class="cr-icon fa fa-check fa-inverse"></i></span>
                     Clínicas
                   </label>
                 </div>
-                <div class="form-check">
-                  <input class="form-check-input checkbox" type="checkbox" value="veterinarios" id="chk-veterinarios">
-                  <label class="form-check-label d-flex align-items-center" for="chk-veterinarios">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" onchange="filters()" value="veterinarios" id="chk-veterinarios">
+                    <span class="cr"><i class="cr-icon fa fa-check fa-inverse"></i></span>
                     Veterinários
                   </label>
                 </div>
@@ -131,27 +141,32 @@
             <div id="alimentacao" class="filter-group">
               <h5>Alimentação</h5>
               <div class="form-check form-check-alimentacao">
-                <div class="form-check">
-                  <input class="form-check-input checkbox" type="checkbox" value="mercados" id="chk-mercados">
-                  <label class="form-check-label d-flex align-items-center" for="chk-mercados">
+
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" onchange="filters()" value="mercados" id="chk-mercados">
+                    <span class="cr"><i class="cr-icon fa fa-check fa-inverse"></i></span>
                     Mercados
                   </label>
                 </div>
-                <div class="form-check">
-                  <input class="form-check-input checkbox" type="checkbox" value="talhos" id="chk-talhos">
-                  <label class="form-check-label d-flex align-items-center" for="chk-talhos">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" onchange="filters()" value="talhos" id="chk-talhos">
+                    <span class="cr"><i class="cr-icon fa fa-check fa-inverse"></i></span>
                     Talhos
                   </label>
                 </div>
-                <div class="form-check">
-                  <input class="form-check-input checkbox" type="checkbox" value="padarias" id="chk-padarias">
-                  <label class="form-check-label d-flex align-items-center" for="chk-padarias">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" onchange="filters()" value="padarias" id="chk-padarias">
+                    <span class="cr"><i class="cr-icon fa fa-check fa-inverse"></i></span>
                     Padarias
                   </label>
                 </div>
-                <div class="form-check">
-                  <input class="form-check-input checkbox" type="checkbox" value="restaurantes" id="chk-restaurantes">
-                  <label class="form-check-label d-flex align-items-center" for="chk-restaurantes">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" onchange="filters()" value="restaurantes" id="chk-restaurantes">
+                    <span class="cr"><i class="cr-icon fa fa-check fa-inverse"></i></span>
                     Restaurantes
                   </label>
                 </div>
@@ -163,34 +178,39 @@
             <div id="servicos" class="filter-group">
               <h5>Serviços</h5>
               <div class="form-check form-check-alimentacao">
-                <div class="form-check">
-                  <input class="form-check-input checkbox" type="checkbox" value="lavandarias" id="chk-lavandarias">
-                  <label class="form-check-label d-flex align-items-center" for="chk-lavandarias">
+
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" onchange="filters()" value="lavandarias" id="chk-lavandarias">
+                    <span class="cr"><i class="cr-icon fa fa-check fa-inverse"></i></span>
                     Lavandarias
                   </label>
                 </div>
-                <div class="form-check">
-                  <input class="form-check-input checkbox" type="checkbox" value="telecomunicacoes"
-                    id="chk-telecomunicacoes">
-                  <label class="form-check-label d-flex align-items-center" for="chk-telecomunicacoes">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" onchange="filters()" value="telecomunicacoes" id="chk-telecomunicacoes">
+                    <span class="cr"><i class="cr-icon fa fa-check fa-inverse"></i></span>
                     Telecomunicações
                   </label>
                 </div>
-                <div class="form-check">
-                  <input class="form-check-input checkbox" type="checkbox" value="combustiveis" id="chk-combustiveis">
-                  <label class="form-check-label d-flex align-items-center" for="chk-combustiveis">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" onchange="filters()" value="combustiveis" id="chk-combustiveis">
+                    <span class="cr"><i class="cr-icon fa fa-check fa-inverse"></i></span>
                     Combustíveis
                   </label>
                 </div>
-                <div class="form-check">
-                  <input class="form-check-input checkbox" type="checkbox" value="gas" id="chk-gas">
-                  <label class="form-check-label d-flex align-items-center" for="chk-gas">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" onchange="filters()" value="gas" id="chk-gas">
+                    <span class="cr"><i class="cr-icon fa fa-check fa-inverse"></i></span>
                     Gás
                   </label>
                 </div>
-                <div class="form-check">
-                  <input class="form-check-input checkbox" type="checkbox" value="oficinas" id="chk-oficinas">
-                  <label class="form-check-label d-flex align-items-center" for="chk-oficinas">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" onchange="filters()" value="oficinas" id="chk-oficinas">
+                    <span class="cr"><i class="cr-icon fa fa-check fa-inverse"></i></span>
                     Oficinas
                   </label>
                 </div>
@@ -205,37 +225,18 @@
       <div class="col-xl-9 col-lg-9 col-md-12">
         <!-- === Resultados da Pesquisa == -->
         <div class="row" id="results">
-          <div class="col-xl-4 col-lg-6 col-sm-12" id="0">
-            <img class="card-img-top" src="https://i.imgur.com/QfUEUoy.jpg" alt="Logo of the Company">
-            <div class="card">
-              <div class="card-body">
-                <h3 class="card-title">
-                  O Transmontano
-                </h3>
-                <p class="card-text">
-                  Restaurante
-                </p>
-                <h4 class="card-time">
-                  12h - 20h
-                </h4>
-              </div>
-            </div>
-          </div>
-          <!-- <div class="col-12 search-start">
-            <h3> Insira o seu distrito e concelho para começar a procura.</h3>
-          </div> -->
 
         </div>
-        <!-- ============================= -->
 
-        <!-- === Carregar Mais Resultados == -->
-        <div class="row justify-content-center" id="loadMore" style="display: none;">
-          <button class="btn col-xl-4 col-lg-4 col-md-6 col-sm-10 col-12 load-button" onclick="loadMore()">Carregar
-            Mais</button>
-        </div>
-        <!-- ============================= -->
-      </div><!-- /.col-lg-9 -->
-    </div><!-- /.row -->
+      </div>
+      <!-- === Carregar Mais Resultados == -->
+      <div class="row justify-content-center" id="loadMore" style="display: none;">
+        <button class="btn col-xl-4 col-lg-4 col-md-6 col-sm-10 col-12 load-button" onclick="loadMore()">Carregar
+          Mais</button>
+      </div>
+      <!-- ============================= -->
+    </div><!-- /.col-lg-9 -->
+  </div><!-- /.row -->
   </div><!-- /.container -->
 
 
@@ -245,12 +246,11 @@
   <script src="static/vendor/jquery/jquery.min.js"></script>
   <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <!-- Our JavaScript -->
-  <script src="static/js/search.js"></script>
+  <script src="static/js/results_byname.js"></script>
 
   <script>
     $(window).on('resize', function () {
       var card_width = $($('.card')[0]).width();
-      console.log(card_width);
       var img_left = card_width / 2;
       $(".card-img-top").each(function (index) {
         $(this).css('margin-left', img_left + 'px');
@@ -259,7 +259,6 @@
 
     $(window).on('load', function () {
       var card_width = $($('.card')[0]).outerWidth();
-      console.log(card_width);
       var img_left = card_width / 2;
       $(".card-img-top").each(function (index) {
         $(this).css('margin-left', img_left + 'px');

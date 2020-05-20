@@ -19,7 +19,7 @@ $("#search_button").click(function(){
 
 $("#search_button1").click(function(){
     
-    window.location.href = 'results_byname.html?nome=' + $("#input_text").val()
+    window.location.href = 'results_byname.html?name=' + $("#input_text").val()
 
 
 });
