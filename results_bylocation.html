@@ -103,7 +103,7 @@
     <div class="row card-holder justify-content-center">
 
       <!-- =============================== Filtros-Selecionaveis =============================== -->
-      <div class="col-xl-3 col-lg-3 select-filters">
+      <div class="col-xl-3 col-lg-3 select-filters" id="filtros_chk">
         <h4 class="select-title"><b>Serviços</b></h6>
           <hr>
           <div class="list-group" id="filters">
@@ -150,25 +150,25 @@
               <h5>Alimentação</h5>
               <div class="form-check form-check-alimentacao">
                 <div class="form-check">
-                  <input class="form-check-input checkbox" type="checkbox" value="mercados" id="chk-mercados">
+                  <input class="form-check-input checkbox" type="checkbox" value="mercados" id="chk-mercados" onchange="filters()">
                   <label class="form-check-label d-flex align-items-center" for="chk-mercados">
                     Mercados
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input checkbox" type="checkbox" value="talhos" id="chk-talhos">
+                  <input class="form-check-input checkbox" type="checkbox" value="talhos" id="chk-talhos" onchange="filters()">
                   <label class="form-check-label d-flex align-items-center" for="chk-talhos">
                     Talhos
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input checkbox" type="checkbox" value="padarias" id="chk-padarias">
+                  <input class="form-check-input checkbox" type="checkbox" value="padarias" id="chk-padarias" onchange="filters()">
                   <label class="form-check-label d-flex align-items-center" for="chk-padarias">
                     Padarias
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input checkbox" type="checkbox" value="restaurantes" id="chk-restaurantes">
+                  <input class="form-check-input checkbox" type="checkbox" value="restaurantes" id="chk-restaurantes" onchange="filters()">
                   <label class="form-check-label d-flex align-items-center" for="chk-restaurantes">
                     Restaurantes
                   </label>
@@ -182,32 +182,31 @@
               <h5>Serviços</h5>
               <div class="form-check form-check-alimentacao">
                 <div class="form-check">
-                  <input class="form-check-input checkbox" type="checkbox" value="lavandarias" id="chk-lavandarias">
+                  <input class="form-check-input checkbox" type="checkbox" value="lavandarias" id="chk-lavandarias" onchange="filters()">
                   <label class="form-check-label d-flex align-items-center" for="chk-lavandarias">
                     Lavandarias
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input checkbox" type="checkbox" value="telecomunicacoes"
-                    id="chk-telecomunicacoes">
+                  <input class="form-check-input checkbox" type="checkbox" value="telecomunicacoes" id="chk-telecomunicacoes" onchange="filters()">
                   <label class="form-check-label d-flex align-items-center" for="chk-telecomunicacoes">
                     Telecomunicações
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input checkbox" type="checkbox" value="combustiveis" id="chk-combustiveis">
+                  <input class="form-check-input checkbox" type="checkbox" value="combustiveis" id="chk-combustiveis" onchange="filters()">
                   <label class="form-check-label d-flex align-items-center" for="chk-combustiveis">
                     Combustíveis
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input checkbox" type="checkbox" value="gas" id="chk-gas">
+                  <input class="form-check-input checkbox" type="checkbox" value="gas" id="chk-gas" onchange="filters()">
                   <label class="form-check-label d-flex align-items-center" for="chk-gas">
                     Gás
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input checkbox" type="checkbox" value="oficinas" id="chk-oficinas">
+                  <input class="form-check-input checkbox" type="checkbox" value="oficinas" id="chk-oficinas" onchange="filters()">
                   <label class="form-check-label d-flex align-items-center" for="chk-oficinas">
                     Oficinas
                   </label>

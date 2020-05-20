@@ -98,6 +98,8 @@ function generate_card(estab_obj) {
     card_div.appendChild(img);
     card_div.appendChild(info_div);
 
+    
+
     return card_div;
 }
 
@@ -437,6 +439,50 @@ function loadDetails(id) {
     }
 
 
+}
+
+function filters(){
+    var filtros = document.getElementById("filtros_chk");
+    var checked = filtros.getElementsByTagName("INPUT");
+    var flag = false;
+    var count = 0;
+    for(var x = 0;x < checked.length; x++){
+        if (checked[x].checked){
+            flag = true;
+        }
+    }
+
+    if(flag){
+        for (var i = 0 ; i < checked.length; i++) {
+                if (checked[i].checked){
+                    for(var k = 0; k < estab_obj.length; k++){
+                        if(estab_obj[k]["Categorias"] == checked[i].value){
+                            var resultados = results.getElementsByClassName(estab_obj[k]["Categorias"]);
+                            for( var j = 0; j < resultados.length; j++){
+                                resultados[j].style.display = "";
+                            }
+                        }
+                    }
+                }
+                else{
+                    for(var k = 0; k < estab_obj.length; k++){
+                        if(estab_obj[k]["Categorias"] == checked[i].value){
+                            var resultados = results.getElementsByClassName(estab_obj[k]["Categorias"]);
+                            for( var j = 0; j < resultados.length; j++){
+                                resultados[j].style.display = "none";
+                            }
+                        }
+                    }
+
+                }
+        }
+    }
+    else{
+        var todos = results.getElementsByTagName("div");
+        for(var i = 0; i < todos.length; i++){
+            todos[i].style.display = "";
+        }
+    }
 }
 
 
