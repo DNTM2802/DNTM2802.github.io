@@ -665,3 +665,8 @@ footer i.fa-instagram{
     font-size:1rem;
   }
 }
+
+#search_button:focus, #input_text:focus, #search_button1:focus{
+  outline: none;
+  box-shadow:none;
+} 

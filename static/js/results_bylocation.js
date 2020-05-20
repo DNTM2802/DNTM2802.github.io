@@ -5,11 +5,8 @@ var selected_id = -1;
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const location_estab = urlParams.get('local');
-console.log(location_estab);
 
 var estab_obj = JSON.parse(localStorage.getItem(String(location_estab)))
-console.log("Objeto:");
-console.log(estab_obj)
 
 for (var k = 0; k < estab_obj.length; k++) {
     //console.log(estab_obj[k]);
