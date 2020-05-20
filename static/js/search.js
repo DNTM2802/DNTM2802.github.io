@@ -38,3 +38,11 @@ $("#search_button1").click(function(){
 $("#homeButton").click(function(){
     window.location.href = 'index.html'
 });
+
+$('#input_text').keypress(function (e) {
+    var key = e.which;
+    if(key == 13)
+     {
+       $('#search_button1').click();
+     }
+}); 
