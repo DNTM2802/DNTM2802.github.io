@@ -20,69 +20,29 @@
 
   <!-- Custom styles for this template -->
   <link href="static/css/general.css" rel="stylesheet">
-  <link href="static/css/search_location.css" rel="stylesheet">
+  <link href="static/css/submit.css" rel="stylesheet">
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="static/vendor/font-awesome/css/font-awesome.min.css">
 
-  <style>
-    .container {
-      justify-content: left;
-      background-color: #FFBF69;
-      -webkit-border-radius: 25px;
-      -moz-border-radius: 25px;
-      border-radius: 25px;
-      display: block;
-    }
-
-    p {
-      color: white;
-      font-size: large;
-      font-weight: bold;
-    }
-
-    .btn {
-      background-color: white !important;
-      text-align: left;
-      border-radius: 15%;
-      color: black;
-      float: left;
-      height: 100%;
-      width: 100%;
-      top: 0;
-      left: 0;
-      -webkit-border-radius: 50px;
-      -moz-border-radius: 50px;
-      border-radius: 50px;
-    }
-
-    .form-check-label {
-      color: white;
-    }
-
-    h5 {
-      color: white;
-    }
-
-    .form-control {
-      -webkit-border-radius: 50px;
-      -moz-border-radius: 50px;
-      border-radius: 50px;
-    }
-
-    .btn-default {
-      border: 2px solid black;
-      background-color: white;
-      color: black;
-      padding: 14px 28px;
-      font-size: 16px;
-      cursor: pointer;
-      text-align: center;
-    }
-  </style>
-
-
 </head>
+<style>
+  .checkbox .cr {
+    position: relative;
+    display: inline-block;
+    border: 1px solid white;
+    border-radius: .25em;
+    width: 1.3em;
+    height: 1.3em;
+    float: left;
+    margin-right: .5em;
+  }
+
+  .checkbox label input[type="checkbox"]:checked+span {
+    background-color: white;
+    border: none;
+  }
+</style>
 
 <body>
   <!-- Nav Bar -->
@@ -109,35 +69,33 @@
 
   <!-- Page Content -->
   <div class="container" style="background-color: white;" id="Titulo">
-    <p></p>
+
     <h1 style="text-align: center;">
       Dá visibilidade ao teu negócio
       ou aos negócios à tua volta
     </h1>
   </div>
   <div class="container" style="background-color: white;visibility: hidden;" id="Obrigado">
-    <p></p>
-  <h1 style="text-align: center;">
-    Obrigado!
-  </h1>
-</div>
-<div class="container" style="background-color: white;visibility: visible;" id="errors">
-  
-</div>
+
+    <h1 style="text-align: center;">
+      Obrigado!
+    </h1>
+  </div>
+  <div class="container" style="background-color: white;visibility: visible;" id="errors">
+
+  </div>
   <div class="container" id="Localizacao">
     <div class="row">
       <div class="col-12">
-        <p></p>
         <h2 style="color: white; font-weight: bold;">Localização</h2>
-        <p></p>
       </div>
     </div>
     <div class="row">
       <div class="col-6">
         <div class="dropdown" id="dropdown1">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Distrito
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Distrito *
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <a class="dropdown-item" id="distrito" href="#">Aveiro</a>
@@ -148,7 +106,7 @@
         <div class="dropdown">
           <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Concelho
+            Concelho *
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
             <a class="dropdown-item" href="#" id="cacia">Cacia</a>
@@ -159,13 +117,13 @@
     </div>
     <div class="row">
       <div class="col-12">
-        <p></p>
-        <p>Morada</p>
+
+        <h5>Morada *</h5>
       </div>
     </div>
     <div class="row" id="moradaalert">
       <div class="col-12">
-        <p style="font-size: small;text-align: center;">Introduza a morada (Obrigatório)</p>
+        <p class="mandatory-info">Introduza a morada (Obrigatório)</p>
       </div>
     </div>
     <div class="row">
@@ -178,24 +136,24 @@
     </div>
   </div>
   <div>
-    <p></p>
+
   </div>
   <div class="container" id="Info">
     <div class="row">
       <div class="col-12">
-        <p></p>
+
         <h2 style="color: white; font-weight: bold;">Informações gerais</h2>
-        <p></p>
+
       </div>
     </div>
     <div class="row">
       <div class="col-12">
-        <p>Nome</p>
+        <h5>Nome *</h5>
       </div>
     </div>
     <div class="row" id="nomealert">
       <div class="col-12">
-        <p style="font-size: small;text-align: center;">Introduza o Nome (Obrigatório)</p>
+        <p class="mandatory-info">Introduza o Nome (Obrigatório)</p>
       </div>
     </div>
     <div class="row">
@@ -208,12 +166,12 @@
     </div>
     <div class="row">
       <div class="col-12">
-        <p>Horario</p>
+        <h5>Horário *</h5>
       </div>
     </div>
     <div class="row" id="horarioalert">
       <div class="col-12">
-        <p style="font-size: small;text-align: center;">Introduza o Horario (Obrigatório)</p>
+        <p class="mandatory-info">Introduza o Horario (Obrigatório)</p>
       </div>
     </div>
     <div class="row">
@@ -226,43 +184,49 @@
     </div>
     <div class="row">
       <div class="col-12">
-        <p>Categorias abrangidas</p>
-        <div class="container">
-          <div class="row">
+        <h5>Categorias abrangidas</h5>
+        <div class="container" style="margin-bottom: 0!important;padding-top: 0!important;">
+          <div class="row" style="margin-bottom: 20px;">
             <div class="col-12">
               <p>O meu estabelecimento é do tipo...</p>
             </div>
           </div>
+
           <div id="saude" class="filter-group">
             <h5>Saúde</h5>
             <div class="form-check form-check-saude">
-              <div class="form-check">
-                <input class="form-check-input checkbox" type="checkbox" value="farmacias" id="chk-farmacias">
-                <label class="form-check-label d-flex align-items-center" for="chk-farmacias">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"  value="farmacias" id="chk-farmacias">
+                  <span class="cr"><i class="cr-icon fa fa-check fa-inverse" style="color:#ffbf69;"></i></span>
                   Farmácias
                 </label>
               </div>
-              <div class="form-check">
-                <input class="form-check-input checkbox" type="checkbox" value="hospitais" id="chk-hospitais">
-                <label class="form-check-label d-flex align-items-center" for="chk-hospitais">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"  value="hospitais" id="chk-hospitais">
+                  <span class="cr"><i class="cr-icon fa fa-check fa-inverse" style="color:#ffbf69;"></i></span>
                   Hospitais
                 </label>
               </div>
-              <div class="form-check">
-                <input class="form-check-input checkbox" type="checkbox" value="c_saude" id="chk-c_saude">
-                <label class="form-check-label d-flex align-items-center" for="chk-c_saude">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"  value="c_saude" id="chk-c_saude">
+                  <span class="cr"><i class="cr-icon fa fa-check fa-inverse" style="color:#ffbf69;"></i></span>
                   Centros de Saúde
                 </label>
               </div>
-              <div class="form-check">
-                <input class="form-check-input checkbox" type="checkbox" value="clinicas" id="chk-clinicas">
-                <label class="form-check-label d-flex align-items-center" for="chk-clinicas">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"  value="clinicas" id="chk-clinicas">
+                  <span class="cr"><i class="cr-icon fa fa-check fa-inverse" style="color:#ffbf69;"></i></span>
                   Clínicas
                 </label>
               </div>
-              <div class="form-check">
-                <input class="form-check-input checkbox" type="checkbox" value="veterinarios" id="chk-veterinarios">
-                <label class="form-check-label d-flex align-items-center" for="chk-veterinarios">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"  value="veterinarios" id="chk-veterinarios">
+                  <span class="cr"><i class="cr-icon fa fa-check fa-inverse" style="color:#ffbf69;"></i></span>
                   Veterinários
                 </label>
               </div>
@@ -274,27 +238,32 @@
           <div id="alimentacao" class="filter-group">
             <h5>Alimentação</h5>
             <div class="form-check form-check-alimentacao">
-              <div class="form-check">
-                <input class="form-check-input checkbox" type="checkbox" value="mercados" id="chk-mercados">
-                <label class="form-check-label d-flex align-items-center" for="chk-mercados">
+
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"  value="mercados" id="chk-mercados">
+                  <span class="cr"><i class="cr-icon fa fa-check fa-inverse" style="color:#ffbf69;"></i></span>
                   Mercados
                 </label>
               </div>
-              <div class="form-check">
-                <input class="form-check-input checkbox" type="checkbox" value="talhos" id="chk-talhos">
-                <label class="form-check-label d-flex align-items-center" for="chk-talhos">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"  value="talhos" id="chk-talhos">
+                  <span class="cr"><i class="cr-icon fa fa-check fa-inverse" style="color:#ffbf69;"></i></span>
                   Talhos
                 </label>
               </div>
-              <div class="form-check">
-                <input class="form-check-input checkbox" type="checkbox" value="padarias" id="chk-padarias">
-                <label class="form-check-label d-flex align-items-center" for="chk-padarias">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"  value="padarias" id="chk-padarias">
+                  <span class="cr"><i class="cr-icon fa fa-check fa-inverse" style="color:#ffbf69;"></i></span>
                   Padarias
                 </label>
               </div>
-              <div class="form-check">
-                <input class="form-check-input checkbox" type="checkbox" value="restaurantes" id="chk-restaurantes">
-                <label class="form-check-label d-flex align-items-center" for="chk-restaurantes">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"  value="restaurantes" id="chk-restaurantes">
+                  <span class="cr"><i class="cr-icon fa fa-check fa-inverse" style="color:#ffbf69;"></i></span>
                   Restaurantes
                 </label>
               </div>
@@ -306,86 +275,93 @@
           <div id="servicos" class="filter-group">
             <h5>Serviços</h5>
             <div class="form-check form-check-alimentacao">
-              <div class="form-check">
-                <input class="form-check-input checkbox" type="checkbox" value="lavandarias" id="chk-lavandarias">
-                <label class="form-check-label d-flex align-items-center" for="chk-lavandarias">
+
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"  value="lavandarias" id="chk-lavandarias">
+                  <span class="cr"><i class="cr-icon fa fa-check fa-inverse" style="color:#ffbf69;"></i></span>
                   Lavandarias
                 </label>
               </div>
-              <div class="form-check">
-                <input class="form-check-input checkbox" type="checkbox" value="telecomunicacoes"
-                  id="chk-telecomunicacoes">
-                <label class="form-check-label d-flex align-items-center" for="chk-telecomunicacoes">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"  value="telecomunicacoes" id="chk-telecomunicacoes">
+                  <span class="cr"><i class="cr-icon fa fa-check fa-inverse" style="color:#ffbf69;"></i></span>
                   Telecomunicações
                 </label>
               </div>
-              <div class="form-check">
-                <input class="form-check-input checkbox" type="checkbox" value="combustiveis" id="chk-combustiveis">
-                <label class="form-check-label d-flex align-items-center" for="chk-combustiveis">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"  value="combustiveis" id="chk-combustiveis">
+                  <span class="cr"><i class="cr-icon fa fa-check fa-inverse" style="color:#ffbf69;"></i></span>
                   Combustíveis
                 </label>
               </div>
-              <div class="form-check">
-                <input class="form-check-input checkbox" type="checkbox" value="gas" id="chk-gas">
-                <label class="form-check-label d-flex align-items-center" for="chk-gas">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"  value="gas" id="chk-gas">
+                  <span class="cr"><i class="cr-icon fa fa-check fa-inverse" style="color:#ffbf69;"></i></span>
                   Gás
                 </label>
               </div>
-              <div class="form-check">
-                <input class="form-check-input checkbox" type="checkbox" value="oficinas" id="chk-oficinas">
-                <label class="form-check-label d-flex align-items-center" for="chk-oficinas">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"  value="oficinas" id="chk-oficinas">
+                  <span class="cr"><i class="cr-icon fa fa-check fa-inverse" style="color:#ffbf69;"></i></span>
                   Oficinas
                 </label>
               </div>
             </div>
           </div>
-          <hr>
-
-          <div id="servicos" class="filter-group">
-            <h5>Comodidades prestadas</h5>
-            <div class="form-check form-check-alimentacao">
-              <div class="form-check">
-                <input class="form-check-input checkbox" type="checkbox" value="EntregasEmCasa" id="chk-EntregasEmCasa">
-                <label class="form-check-label d-flex align-items-center" for="chk-EntregasEmCasa">
-                  Entregas em casa
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input checkbox" type="checkbox" value="EncomendasPorTelefone"
+        </div>
+        <div id="servicos" class="filter-group">
+          <h5>Comodidades prestadas</h5>
+          <div class="form-check form-check-alimentacao">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox"  value="EntregasEmCasa" id="chk-EntregasEmCasa">
+                <span class="cr"><i class="cr-icon fa fa-check fa-inverse" style="color:#ffbf69;"></i></span>
+                Entregas em Casa
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox"  value="EncomendasPorTelefone"
                   id="chk-EncomendasPorTelefone">
-                <label class="form-check-label d-flex align-items-center" for="chk-EncomendasPorTelefone">
-                  Encomendas por telefone
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input checkbox" type="checkbox" value="TakeAway" id="chk-TakeAway">
-                <label class="form-check-label d-flex align-items-center" for="chk-TakeAway">
-                  Take-away
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input checkbox" type="checkbox" value="Outra" id="chk-Outra">
-                <label class="form-check-label d-flex align-items-center" for="chk-Outra">
-                  Outra
-                </label>
-              </div>
-              <input type="text" class="form-control" placeholder="Ex: Encomendas por Facebook"
-                aria-label="Recipient's username" aria-describedby="basic-addon2" id="Outras">
+                <span class="cr"><i class="cr-icon fa fa-check fa-inverse" style="color:#ffbf69;"></i></span>
+                Encomendas por telefone
+              </label>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-12">
-              <p></p>
-              <p>Imagem</p>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox"  value="TakeAway" id="chk-TakeAway">
+                <span class="cr"><i class="cr-icon fa fa-check fa-inverse" style="color:#ffbf69;"></i></span>
+                Take-Away
+              </label>
             </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox"  value="Outra" id="chk-Outra">
+                <span class="cr"><i class="cr-icon fa fa-check fa-inverse" style="color:#ffbf69;"></i></span>
+                Outra
+              </label>
+            </div>
+            <input type="text" class="form-control" placeholder="Ex: Encomendas por Facebook"
+              aria-label="Recipient's username" aria-describedby="basic-addon2" id="Outras">
           </div>
-          <div class="row">
-            <div class="col-12">
-              <div class="input-group mb-3">
-                <div class="custom-file">
-                  <input type="file" class="custom-file-input" id="customFile">
-                  <label class="custom-file-label" for="customFile">Choose file</label>
-                </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+
+            <h5>Imagem</h5>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="input-group mb-3">
+              <div class="custom-file">
+                <input type="file" class="custom-file-input" id="customFile">
+                <label class="custom-file-label" for="customFile">Escolher imagem</label>
               </div>
             </div>
           </div>
@@ -395,14 +371,14 @@
   </div>
   </div>
   <div>
-    <p></p>
+
   </div>
   <div class="container" id="Contactos">
     <div class="row">
       <div class="col-12">
-        <p></p>
+
         <h2 style="color: white; font-weight: bold;">Contactos</h2>
-        <p></p>
+
       </div>
     </div>
     <div class="row">
@@ -428,7 +404,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-12">
+      <div class="col-6">
         <div class="input-group mb-3">
           <input type="text" class="form-control" placeholder="" aria-label="Recipient's username"
             aria-describedby="basic-addon2" id="Email">
@@ -462,29 +438,29 @@
     </div>
     <div class="row">
       <div class="col-12">
-        <p></p>
+
         <p>Website</p>
       </div>
     </div>
     <div class="row">
-      <div class="col-12">
+      <div class="col-6">
         <input type="text" class="form-control" placeholder="" aria-label="Recipient's username"
           aria-describedby="basic-addon2" id="Website">
       </div>
     </div>
     <div class="row">
-      <p></p>
+
     </div>
   </div>
   <div>
-    <p></p>
+
   </div>
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <p></p>
+
         <h2 style="color: white; font-weight: bold;">Observações</h2>
-        <p></p>
+
       </div>
     </div>
     <div class="row">
@@ -492,28 +468,23 @@
         <div class="form-group">
           <textarea class="form-control" rows="5"
             placeholder="Ex: Premanência máxima de 3 pessoas no estabelecimkento sendo que cada uma das pessoas terá um lugar predefinido e marcado mno estabelecimento"
-            id="Obs" style="border-radius: 25px;"></textarea>
+            id="Obs" style="border-radius: 15px;"></textarea>
         </div>
       </div>
     </div>
   </div>
   </div>
   <div>
-    <p></p>
+
   </div>
-  <div class="container" style="background-color: white;" id="button">
+  <div class="container" style="background-color: transparent;" id="button">
     <div class="row">
       <div class="col-4"></div>
       <div class="col-4">
-        <button type="button" id="submit" class="btn btn-default">Submeter negócio</button>
+        <button type="button" id="submit" class="home_button">Submeter negócio</button>
       </div>
       <div class="col-4"></div>
     </div>
-  </div>
-  <div class="container" style="background-color: white;">
-    <p>&nbsp</p>
-    <p>&nbsp</p>
-    <p>&nbsp</p>
   </div>
 
 
@@ -523,6 +494,17 @@
 
   <!-- Our JavaScript -->
   <script src="static/js/submit.js"></script>
+
+  <script>
+
+    $('#chk-Outra').change(function () {
+      if (this.checked) {
+        $('#Outras').show();
+      } else {
+        $('#Outras').hide();
+      }
+    });
+  </script>
 
 </body>
 
