@@ -332,44 +332,50 @@ footer i.fa-instagram{
 
 /*----------------- CHECK BOX ---------------------*/
 
-/* checkbox effect #1 */
-.checkbox:not(:checked), .checkbox:checked {
-  position: absolute;
-  left: -9999px;
+.checkbox label:after {
+  content: '';
+  display: table;
+  clear: both;
 }
 
-.checkbox:not(:checked) + label:before, .checkbox:checked + label:before {
-  content: "";
+.checkbox .cr {
+  position: relative;
   display: inline-block;
-  width: 26px;
-  height: 26px;
-  border: 2px solid #d4d7d9;
-  box-sizing: border-box;
-  border-radius: 3px;
-  margin-right: 20px;
+  border: 1px solid #a9a9a9;
+  border-radius: .25em;
+  width: 1.3em;
+  height: 1.3em;
+  float: left;
+  margin-right: .5em;
 }
-.checkbox:not(:checked) + label:after, .checkbox:checked + label:after {
-  content: "\f00c";
-  font-family: fontawesome;
-  font-size: 17px;
-  display: flex;
-  height: 100%;
-  align-items: center;
-  position: absolute;
-  top: -2px;
-  left: 35px;
-  color: #fff;
-  transform-origin: center center;
-}
-.checkbox:not(:checked) + label:after {
-  transform: scale(0);
-}
-.checkbox:checked + label:before {
+
+.checkbox label input[type="checkbox"]:checked + span {
   background-color: #ffbf69;
-  border-color: #ffbf69;
+  border: none;
 }
-.checkbox:checked + label:after {
-  transform: scale(1);
+
+.checkbox .cr .cr-icon {
+  position: absolute;
+  font-size: .8em;
+  line-height: 0;
+  top: 50%;
+  left: 15%;
+}
+
+.checkbox label input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox label input[type="checkbox"]+.cr>.cr-icon {
+  opacity: 0;
+}
+
+.checkbox label input[type="checkbox"]:checked+.cr>.cr-icon {
+  opacity: 1;
+}
+
+.checkbox label input[type="checkbox"]:disabled+.cr {
+  opacity: .5;
 }
 
 
