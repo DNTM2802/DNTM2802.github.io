@@ -294,7 +294,47 @@ $("#submit").click(function(){
         } 
     }else{ 
         $("#alert10").hide(); 
+    }
+    if(morada.length < 5){ 
+        console.log(morada)
+        if ($("#alert11").length == 0){ 
+            var toAppend= '<div class="alert alert-warning" role="alert" id="alert11" style="visibility: visible;">Morada Invalida</div>'; 
+            $("#errors").append(toAppend); 
+            window.scrollTo(0,0); 
+            noErrors=false; 
+        }else{ 
+            $("#alert11").show(); 
+            noErrors=false; 
+        } 
+    }else{ 
+        $("#alert11").hide(); 
     } 
+    if(horario.length < 5){ 
+        if ($("#alert12").length == 0){ 
+            var toAppend= '<div class="alert alert-warning" role="alert" id="alert12" style="visibility: visible;">Horiario Invalido</div>'; 
+            $("#errors").append(toAppend); 
+            window.scrollTo(0,0); 
+            noErrors=false; 
+        }else{ 
+            $("#alert12").show(); 
+            noErrors=false; 
+        } 
+    }else{ 
+        $("#alert12").hide(); 
+    } 
+    if(Nome.length <= 3){ 
+        if ($("#alert13").length == 0){ 
+            var toAppend= '<div class="alert alert-warning" role="alert" id="alert13" style="visibility: visible;">Nome Invalido</div>'; 
+            $("#errors").append(toAppend); 
+            window.scrollTo(0,0); 
+            noErrors=false; 
+        }else{ 
+            $("#alert13").show(); 
+            noErrors=false; 
+        } 
+    }else{ 
+        $("#alert13").hide(); 
+    }   
     if(noErrors){ 
         $("#Localizacao").css("visibility","hidden");
         $("#Titulo").css("visibility","hidden"); 
