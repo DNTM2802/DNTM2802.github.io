@@ -3,7 +3,7 @@
 /* -------------------------------  APPLIES TO SEARCH NAME PAGE  -------------------------------*/
 /* ---------------------------------------------------------------------------------------------*/
 
-#dropdownMenuButton1:focus, #dropdownMenuButton:focus {
+#input_text:focus, #search_button1:focus {
     outline: none;
     box-shadow:none;
   }

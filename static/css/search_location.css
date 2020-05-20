@@ -3,7 +3,7 @@
 /* -------------------------------  APPLIES TO SEARCH LOCATION PAGE  -------------------------------*/
 /* -------------------------------------------------------------------------------------------------*/
 
-#dropdownMenuButton1:focus, #dropdownMenuButton:focus {
+#dropdownMenuButton1:focus, #dropdownMenuButton:focus, #search_button:focus {
     outline: none;
     box-shadow:none;
   }
