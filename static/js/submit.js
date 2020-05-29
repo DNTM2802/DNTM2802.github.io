@@ -208,7 +208,7 @@ $("#submit").click(function () {
     } else {
         $("#alert3").hide();
     }
-    if (Telefone1.toString().length != 9 && Telefone1.toString().length != 0) {
+    if ((Telefone1.match(/[0-9]+/) == null || Telefone1.length != 9) && Telefone2.length !=0) {
         if ($("#alert4").length == 0) {
             var toAppend = '<div class="alert alert-warning" role="alert" id="alert4" style="visibility: visible;">Telefone 1 com formato invalido</div>';
             $("#errors").append(toAppend);
@@ -221,7 +221,7 @@ $("#submit").click(function () {
     } else {
         $("#alert4").hide();
     }
-    if (Telefone2.toString().length != 9 && Telefone2.toString().length != 0) {
+    if ((Telefone2.match(/[0-9]+/) == null || Telefone2.length != 9) && Telefone2.length !=0) {
         if ($("#alert5").length == 0) {
             var toAppend = '<div class="alert alert-warning" role="alert" id="alert5" style="visibility: visible;">Telefone 2 com formato invalido</div>';
             $("#errors").append(toAppend);
@@ -234,7 +234,7 @@ $("#submit").click(function () {
     } else {
         $("#alert5").hide();
     }
-    if (email.length < 7 && email.length != 0) {
+    if (email.match(/[a-z]+@[a-z]+.[a-z]/) == null && email.length != 0) {
         if ($("#alert6").length == 0) {
             var toAppend = '<div class="alert alert-warning" role="alert" id="alert6" style="visibility: visible;">Email invalido</div>';
             $("#errors").append(toAppend);
@@ -247,7 +247,7 @@ $("#submit").click(function () {
     } else {
         $("#alert6").hide();
     }
-    if (Facebook.length < 5 && Facebook.length != 0) {
+    if (Facebook.match(/facebook.com\/[a-z]+/) == null && Facebook.length != 0) {
         if ($("#alert7").length == 0) {
             var toAppend = '<div class="alert alert-warning" role="alert" id="alert7" style="visibility: visible;">Facebook Invalido</div>';
             $("#errors").append(toAppend);
@@ -260,7 +260,7 @@ $("#submit").click(function () {
     } else {
         $("#alert7").hide();
     }
-    if (Twitter.length < 5 && Twitter.length != 0) {
+    if (Twitter.match(/twitter.com\/[a-z]+/) == null && Twitter.length != 0) {
         if ($("#alert8").length == 0) {
             var toAppend = '<div class="alert alert-warning" role="alert" id="alert8" style="visibility: visible;">Twitter Invalido</div>';
             $("#errors").append(toAppend);
@@ -273,7 +273,7 @@ $("#submit").click(function () {
     } else {
         $("#alert8").hide();
     }
-    if (Instagram.length < 5 && Instagram.length != 0) {
+    if (Instagram.match(/instagram.com\/[a-z]+/) == null && Instagram.length != 0) {
         if ($("#alert9").length == 0) {
             var toAppend = '<div class="alert alert-warning" role="alert" id="alert9" style="visibility: visible;">Instagram Invalido</div>';
             $("#errors").append(toAppend);
@@ -286,7 +286,7 @@ $("#submit").click(function () {
     } else {
         $("#alert9").hide();
     }
-    if (Website.length < 5 && Website.length != 0) {
+    if (Website.match(/www.[a-z]+.[a-z]+/) == null && Website.length != 0) {
         if ($("#alert10").length == 0) {
             var toAppend = '<div class="alert alert-warning" role="alert" id="alert10" style="visibility: visible;">Website Invalido</div>';
             $("#errors").append(toAppend);
@@ -300,7 +300,6 @@ $("#submit").click(function () {
         $("#alert10").hide();
     }
     if (morada.length < 5) {
-        console.log(morada)
         if ($("#alert11").length == 0) {
             var toAppend = '<div class="alert alert-warning" role="alert" id="alert11" style="visibility: visible;">Morada Invalida</div>';
             $("#errors").append(toAppend);
