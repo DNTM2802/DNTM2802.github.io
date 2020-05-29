@@ -8,10 +8,7 @@ $(document).ready(function () {
 });
 
 function createUUID() {
-    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
-        var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
-        return v.toString(16);
-    });
+    return Math.floor(Math.random() * (999999 - 100000 + 1) + 100000);
 }
 
 function getBase64Image(img) {
@@ -160,9 +157,9 @@ $("#submit").click(function () {
     var Website = $("#Website").val();
     var Obs = $("#Obs").val();
     var id = createUUID();
-    if (DistricSelected === "Distrito") {
+    if (DistricSelected === "Distrito *") {
         if ($("#alert1").length == 0) {
-            var toAppend = '<div class="alert alert-warning" role="alert" id="alert1" style="visibility: visible;">Distrito Invalido</div>';
+            var toAppend = '<div class="alert alert-danger" role="alert" id="alert1" style="visibility: visible;">Insira um distrito.</div>';
             $("#errors").append(toAppend);
             window.scrollTo(0, 0);
             noErrors = false;
@@ -173,9 +170,9 @@ $("#submit").click(function () {
     } else {
         $("#alert1").hide();
     }
-    if (ConSelected === "Concelho") {
+    if (ConSelected === "Concelho *") {
         if ($("#alert2").length == 0) {
-            var toAppend = '<div class="alert alert-warning" role="alert" id="alert2" style="visibility: visible;">Concelho Invalido</div>';
+            var toAppend = '<div class="alert alert-danger" role="alert" id="alert2" style="visibility: visible;">Insira um concelho.</div>';
             $("#errors").append(toAppend);
             window.scrollTo(0, 0);
             noErrors = false;
@@ -197,7 +194,7 @@ $("#submit").click(function () {
     }
     if (count == 0) {
         if ($("#alert3").length == 0) {
-            var toAppend = '<div class="alert alert-warning" role="alert" id="alert3" style="visibility: visible;">Introduza o tipo de estabelecimento</div>';
+            var toAppend = '<div class="alert alert-danger" role="alert" id="alert3" style="visibility: visible;">Introduza pelo menos um tipo de estabelecimento.</div>';
             $("#errors").append(toAppend);
             window.scrollTo(0, 0);
             noErrors = false;
@@ -210,7 +207,7 @@ $("#submit").click(function () {
     }
     if ((Telefone1.match(/[0-9]+/) == null || Telefone1.length != 9) && Telefone2.length !=0) {
         if ($("#alert4").length == 0) {
-            var toAppend = '<div class="alert alert-warning" role="alert" id="alert4" style="visibility: visible;">Telefone 1 com formato invalido</div>';
+            var toAppend = '<div class="alert alert-warning" role="alert" id="alert4" style="visibility: visible;">Primeiro telefone com formato inválido.</div>';
             $("#errors").append(toAppend);
             window.scrollTo(0, 0);
             noErrors = false;
@@ -223,7 +220,7 @@ $("#submit").click(function () {
     }
     if ((Telefone2.match(/[0-9]+/) == null || Telefone2.length != 9) && Telefone2.length !=0) {
         if ($("#alert5").length == 0) {
-            var toAppend = '<div class="alert alert-warning" role="alert" id="alert5" style="visibility: visible;">Telefone 2 com formato invalido</div>';
+            var toAppend = '<div class="alert alert-warning" role="alert" id="alert5" style="visibility: visible;">Segundo telefone com formato inválido.</div>';
             $("#errors").append(toAppend);
             window.scrollTo(0, 0);
             noErrors = false;
@@ -236,7 +233,7 @@ $("#submit").click(function () {
     }
     if (email.match(/[a-z]+@[a-z]+.[a-z]/) == null && email.length != 0) {
         if ($("#alert6").length == 0) {
-            var toAppend = '<div class="alert alert-warning" role="alert" id="alert6" style="visibility: visible;">Email invalido</div>';
+            var toAppend = '<div class="alert alert-warning" role="alert" id="alert6" style="visibility: visible;">Email inválido.</div>';
             $("#errors").append(toAppend);
             window.scrollTo(0, 0);
             noErrors = false;
@@ -249,7 +246,7 @@ $("#submit").click(function () {
     }
     if (Facebook.match(/facebook.com\/[a-z]+/) == null && Facebook.length != 0) {
         if ($("#alert7").length == 0) {
-            var toAppend = '<div class="alert alert-warning" role="alert" id="alert7" style="visibility: visible;">Facebook Invalido</div>';
+            var toAppend = '<div class="alert alert-warning" role="alert" id="alert7" style="visibility: visible;">Facebook inválido.</div>';
             $("#errors").append(toAppend);
             window.scrollTo(0, 0);
             noErrors = false;
@@ -262,7 +259,7 @@ $("#submit").click(function () {
     }
     if (Twitter.match(/twitter.com\/[a-z]+/) == null && Twitter.length != 0) {
         if ($("#alert8").length == 0) {
-            var toAppend = '<div class="alert alert-warning" role="alert" id="alert8" style="visibility: visible;">Twitter Invalido</div>';
+            var toAppend = '<div class="alert alert-warning" role="alert" id="alert8" style="visibility: visible;">Twitter inválido.</div>';
             $("#errors").append(toAppend);
             window.scrollTo(0, 0);
             noErrors = false;
@@ -275,7 +272,7 @@ $("#submit").click(function () {
     }
     if (Instagram.match(/instagram.com\/[a-z]+/) == null && Instagram.length != 0) {
         if ($("#alert9").length == 0) {
-            var toAppend = '<div class="alert alert-warning" role="alert" id="alert9" style="visibility: visible;">Instagram Invalido</div>';
+            var toAppend = '<div class="alert alert-warning" role="alert" id="alert9" style="visibility: visible;">Instagram inválido.</div>';
             $("#errors").append(toAppend);
             window.scrollTo(0, 0);
             noErrors = false;
@@ -288,7 +285,7 @@ $("#submit").click(function () {
     }
     if (Website.match(/www.[a-z]+.[a-z]+/) == null && Website.length != 0) {
         if ($("#alert10").length == 0) {
-            var toAppend = '<div class="alert alert-warning" role="alert" id="alert10" style="visibility: visible;">Website Invalido</div>';
+            var toAppend = '<div class="alert alert-warning" role="alert" id="alert10" style="visibility: visible;">Website inválido.</div>';
             $("#errors").append(toAppend);
             window.scrollTo(0, 0);
             noErrors = false;
@@ -301,7 +298,7 @@ $("#submit").click(function () {
     }
     if (morada.length < 5) {
         if ($("#alert11").length == 0) {
-            var toAppend = '<div class="alert alert-warning" role="alert" id="alert11" style="visibility: visible;">Morada Invalida</div>';
+            var toAppend = '<div class="alert alert-danger" role="alert" id="alert11" style="visibility: visible;">Morada demasiado curta.</div>';
             $("#errors").append(toAppend);
             window.scrollTo(0, 0);
             noErrors = false;
@@ -314,7 +311,7 @@ $("#submit").click(function () {
     }
     if (horario.length < 5) {
         if ($("#alert12").length == 0) {
-            var toAppend = '<div class="alert alert-warning" role="alert" id="alert12" style="visibility: visible;">Horiario Invalido</div>';
+            var toAppend = '<div class="alert alert-danger" role="alert" id="alert12" style="visibility: visible;">Horiario inválido.</div>';
             $("#errors").append(toAppend);
             window.scrollTo(0, 0);
             noErrors = false;
@@ -327,7 +324,7 @@ $("#submit").click(function () {
     }
     if (Nome.length <= 3) {
         if ($("#alert13").length == 0) {
-            var toAppend = '<div class="alert alert-warning" role="alert" id="alert13" style="visibility: visible;">Nome Invalido</div>';
+            var toAppend = '<div class="alert alert-danger" role="alert" id="alert13" style="visibility: visible;">Nome demasiado curto.</div>';
             $("#errors").append(toAppend);
             window.scrollTo(0, 0);
             noErrors = false;

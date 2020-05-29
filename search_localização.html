@@ -40,12 +40,18 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="nav navbar-nav ml-auto" id="ul_navbar">
         <li class="nav-item">
-          <a class="nav-link nav-selected" href="index.html">Home</a>
+          <a class="nav-link" id="homeButton"><i class="fa fa-home" style="font-size: 150%;"></i></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" target="_blank">Mais sobre COVID-19</a>
+          <a class="nav-link nav-selected" href="search_localização.html">À minha volta</a>
         </li>
-      </ul>
+        <li class="nav-item">
+          <a class="nav-link" href="search_nome.html">Procurar Estabelecimento</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="submit.html">Submeter Estabelecimento</a>
+        </li>
+      </u>
   </nav>
 
   <!-- Page Content -->
@@ -60,9 +66,7 @@
       <!-- Districts dropdown -->
       <div class="dropdown col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 selectWrapper">
         <button id="dropdownMenuButton" class="btn dropdown-toggle selectBox d-flex justify-content-between"
-          type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Distrito
-        </button>
+          type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Distrito</button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <a class="dropdown-item" id="aveiro" href="#">Aveiro</a>
           </div>
@@ -71,9 +75,7 @@
       <!-- Counties dropdown -->
       <div class="dropdown col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 selectWrapper">
         <button id="dropdownMenuButton1" class="selectBox btn dropdown-toggle d-flex justify-content-between"
-          type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Concelho
-        </button>
+          type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Concelho</button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
             <a class="dropdown-item" id="cacia" href="#">Cacia</a>
             <a class="dropdown-item" id="ilhavo" href="#">Ilhavo</a>
@@ -94,6 +96,26 @@
         <button id="search_button" class="btn search-button">
           <i class="search_button fa fa-search fa-2x" aria-hidden="true"></i>
         </button>
+      </div>
+    </div>
+    <div class="alert alert-danger" id="alertSL" role="alert" style="margin-top: 5%; display: none;">
+      Tem de escolher o distrito e a cidade.
+    </div>
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-6" style="text-align: center;">
+        <img class="home_icon" src="static/img/location_icon.svg">
+      </div>
+      <div class="col-6">
+        <div class="row">
+          <div class="col-12">
+            <h4 class="home_section_title">
+              O que há à minha volta?
+            </h4>
+          </div>
+          <div class="col-12 home_section_description">
+            Descobre os estabelecimentos abertos na tua zona de residência e quem está a oferecer o quê.
+          </div>
+        </div>
       </div>
     </div>
   </div>

@@ -42,6 +42,23 @@
     background-color: white;
     border: none;
   }
+
+  .big_title {
+    margin-bottom: 0!important;
+    text-align: center;
+    margin-top:2rem;
+  }
+
+  #customFileLabel {
+    border-radius: 25px;
+    border: none;
+
+  }
+
+  #customFileLabel::after {
+    border-radius:  0 25px 25px 0;
+    content: "Procurar";
+  }
 </style>
 
 <body>
@@ -56,10 +73,16 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="nav navbar-nav ml-auto" id="ul_navbar">
         <li class="nav-item">
-          <a class="nav-link nav-selected" href="index.html">Home</a>
+          <a class="nav-link" id="homeButton"><i class="fa fa-home" style="font-size: 150%;"></i></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" target="_blank">Mais sobre COVID-19</a>
+          <a class="nav-link" href="search_localização.html">À minha volta</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="search_nome.html">Procurar Estabelecimento</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-selected" href="submit.html">Submeter Estabelecimento</a>
         </li>
       </ul>
   </nav>
@@ -67,10 +90,13 @@
   <!-- Page Content -->
   <div class="container" style="background-color: white;" id="Titulo">
 
-    <h1 style="text-align: center;">
-      Dá visibilidade ao teu negócio
-      ou aos negócios à tua volta
-    </h1>
+
+    <div class="row d-flex justify-content-center">
+      <div class="big_title" style="margin-bottom: 5%">
+        Dá visibilidade ao teu negócio
+        ou aos negócios à tua volta
+      </div>
+    </div>
   </div>
   <div class="container" style="background-color: white;visibility: hidden;" id="Obrigado">
 
@@ -358,7 +384,7 @@
             <div class="input-group mb-3">
               <div class="custom-file">
                 <input type="file" class="custom-file-input" id="customFile">
-                <label class="custom-file-label" for="customFile">Escolher imagem</label>
+                <label id="customFileLabel" class="custom-file-label" for="customFile">Escolher imagem</label>
               </div>
             </div>
           </div>
@@ -455,16 +481,19 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-
         <h2 style="color: white; font-weight: bold;">Observações</h2>
-
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <p style="margin-top:0.5rem;margin-bottom:0.5rem">Indique eventuais condições especiais / excecionais do seu estabelecimento devido à situação de pandemia</p>
       </div>
     </div>
     <div class="row">
       <div class="col-12">
         <div class="form-group">
           <textarea class="form-control" rows="5"
-            placeholder="Ex: Premanência máxima de 3 pessoas no estabelecimkento sendo que cada uma das pessoas terá um lugar predefinido e marcado mno estabelecimento"
+            placeholder="Ex: Premanência máxima de 3 pessoas no estabelecimento sendo que cada uma das pessoas terá um lugar predefinido e marcado mno estabelecimento"
             id="Obs" style="border-radius: 15px;"></textarea>
         </div>
       </div>
@@ -491,6 +520,7 @@
 
   <!-- Our JavaScript -->
   <script src="static/js/submit.js"></script>
+  <script src="static/js/search.js"></script>
 
   <script>
 

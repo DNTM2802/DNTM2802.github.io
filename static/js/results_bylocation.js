@@ -5,11 +5,8 @@ var selected_id = -1;
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const location_estab = urlParams.get('local');
-console.log(location_estab);
 
 var estab_obj = JSON.parse(localStorage.getItem(String(location_estab)))
-console.log("Objeto:");
-console.log(estab_obj)
 
 for (var k = 0; k < estab_obj.length; k++) {
     //console.log(estab_obj[k]);
@@ -63,7 +60,7 @@ function generate_card(estab_obj) {
     var time_est = document.createElement('h4');
     time_est.classList.add("card-time");
     /* Default schedule */
-    time_est.innerText = "Encerrado";
+    time_est.innerText = estab_obj["Horario"];
 
     /* Append the company name and the schedule to the div with the text */
     inside_div.appendChild(title);
@@ -155,25 +152,25 @@ function generate_details(this_card) {
     delevery.innerHTML += "<p><b>Serviços Disponíveis</b></p>";
     
     if (comodities.indexOf("EntregasEmCasa") > -1) {
-        delevery.innerHTML += '<img style="width:25px" src="static/img/comodity_yes.svg">';
+        delevery.innerHTML += '<i class="fa fa-check" aria-hidden="true"></i>';
     } else {
-        delevery.innerHTML += '<img style="width:25px" src="static/img/comodity_no.svg">';
+        delevery.innerHTML += '<i class="fa fa-times" aria-hidden="true"></i>';
     }
     delevery.innerHTML += "<p style='display:inline'> Entregas ao Domicílio</p><br><br>";
 
     
     if (comodities.indexOf("EntregasPorTelefone") > -1) {
-        delevery.innerHTML += '<img style="width:25px" src="static/img/comodity_yes.svg">';
+        delevery.innerHTML += '<i class="fa fa-check" aria-hidden="true"></i>';
     } else {
-        delevery.innerHTML += '<img style="width:25px" src="static/img/comodity_no.svg">';
+        delevery.innerHTML += '<i class="fa fa-times" aria-hidden="true"></i>';
     }
     delevery.innerHTML += "<p style='display:inline'> Encomendas por telefone</p><br><br>";
 
     
     if (comodities.indexOf("TakeAway") > -1) {
-        delevery.innerHTML += '<img style="width:25px" src="static/img/comodity_yes.svg">';
+        delevery.innerHTML += '<i class="fa fa-check" aria-hidden="true"></i>';
     } else {
-        delevery.innerHTML += '<img style="width:25px" src="static/img/comodity_no.svg">';
+        delevery.innerHTML += '<i class="fa fa-times" aria-hidden="true"></i>';
     }
     delevery.innerHTML += "<p style='display:inline'> Take Away</p><br><br>";
 
@@ -284,7 +281,7 @@ function loadDetails(id) {
         /* Get the results div. */
         var results = document.getElementById('results');
         var childnodes = results.childNodes;
-
+        
         /* If the there is a previou selected div. */
         if (selected_id != -1) {
             /* Remove the details from the results div. */
@@ -296,8 +293,6 @@ function loadDetails(id) {
                     childnodes[k].childNodes[1].classList.remove("card-clicked");
                 }
             }
-
-
         }
 
         /* If the new id is different from the previous id (clicked on a new card). */
@@ -361,6 +356,7 @@ function loadDetails(id) {
 }
 
 function filters(){
+    $("#details").hide();
     var filtros = document.getElementById("filtros_chk");
     var checked = filtros.getElementsByTagName("INPUT");
     var flag = false;

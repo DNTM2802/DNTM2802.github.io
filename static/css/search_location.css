@@ -3,3 +3,25 @@
 /* -------------------------------  APPLIES TO SEARCH LOCATION PAGE  -------------------------------*/
 /* -------------------------------------------------------------------------------------------------*/
 
+#dropdownMenuButton1:focus, #dropdownMenuButton:focus, #search_button:focus {
+    outline: none;
+    box-shadow:none;
+  }
+
+  .home_section_title {
+    color: #ffbf69;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 2.0rem;
+  }
+  
+  .home_section_description {
+    font-weight: bold;  
+    color: #979797;
+    font-size: 1.5rem;
+  }
+
+  .home_icon {
+    width: 200px;
+  }

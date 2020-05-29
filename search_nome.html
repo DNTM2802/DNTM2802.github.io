@@ -18,7 +18,7 @@
 
   <!-- Custom styles for this template -->
   <link href="static/css/general.css" rel="stylesheet">
-  <link href="static/css/search_location.css" rel="stylesheet">
+  <link href="static/css/search_name.css" rel="stylesheet">
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="static/vendor/font-awesome/css/font-awesome.min.css">
@@ -28,7 +28,6 @@
 
 <body>
   <!-- Nav Bar -->
-
   <nav class="navbar navbar-expand-xl">
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -38,10 +37,16 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="nav navbar-nav ml-auto" id="ul_navbar">
         <li class="nav-item">
-          <a class="nav-link nav-selected" href="index.html">Home</a>
+          <a class="nav-link" id="homeButton"><i class="fa fa-home" style="font-size: 150%;"></i></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" target="_blank">Mais sobre COVID-19</a>
+          <a class="nav-link" href="search_localização.html">À minha volta</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-selected" href="search_nome.html">Procurar Estabelecimento</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="submit.html">Submeter Estabelecimento</a>
         </li>
       </ul>
   </nav>
@@ -56,10 +61,9 @@
 
     <div class="search-bar row justify-content-between">
 
-      <!-- Counties dropdown -->
       <div class="input-group col-xl-10 col-lg-10 col-md-12 col-sm-12 col-12 selectWrapper">
         <input id="input_text" class="form-control selectBox d-flex justify-content-between"
-          type="text" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" placeholder="Ex: O transmontano" aria-describedby="basic-addon1" style="">
+          type="text" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" placeholder="Ex: O transmontano" aria-describedby="basic-addon1">
       </div>
 
       <!-- Filters dropdown -->
@@ -76,6 +80,26 @@
         <button id="search_button1" class="btn search-button">
           <i class="search_button fa fa-search fa-2x" aria-hidden="true"></i>
         </button>
+      </div>
+    </div>
+    <div class="alert alert-danger" id="alertSN" role="alert" style="margin-top: 5%; display: none;">
+      Tem de inserir um nome.
+    </div>
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-6" style="text-align: center;">
+        <img class="home_icon" src="static/img/store_icon.svg">
+      </div>
+      <div class="col-6">
+        <div class="row">
+          <div class="col-12">
+            <h4 class="home_section_title">
+              Procura por aquela loja!
+            </h4>
+          </div>
+          <div class="col-12 home_section_description">
+            Será que o supermercado da baixa está aberto? Procura um estabelecimento pelo nome e descobre!
+          </div>
+        </div>
       </div>
     </div>
   </div>

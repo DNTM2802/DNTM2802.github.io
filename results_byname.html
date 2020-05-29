@@ -37,12 +37,18 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="nav navbar-nav ml-auto" id="ul_navbar">
         <li class="nav-item">
-          <a class="nav-link nav-selected" href="index.html">Home</a>
+          <a class="nav-link" id="homeButton"><i class="fa fa-home" style="font-size: 150%;"></i></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" target="_blank">Mais sobre COVID-19</a>
+          <a class="nav-link" href="search_localização.html">À minha volta</a>
         </li>
-      </ul>
+        <li class="nav-item">
+          <a class="nav-link nav-selected" href="search_nome.html">Procurar Estabelecimento</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="submit.html">Submeter Estabelecimento</a>
+        </li>
+      </u>
   </nav>
 
   <!-- =============================== Filtros =============================== -->
@@ -57,9 +63,9 @@
     <div class="search-bar row justify-content-between">
       <!-- Counties dropdown -->
       <div class="input-group col-xl-10 col-lg-10 col-md-12 col-sm-12 col-12 selectWrapper">
-        <input id="counties" class="form-control selectBox d-flex justify-content-between" type="text"
+        <input id="input_text" class="form-control selectBox d-flex justify-content-between" type="text"
           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" placeholder="Ex: O transmontano"
-          aria-describedby="basic-addon1" style="">
+          aria-describedby="basic-addon1">
       </div>
 
       <!-- Filters dropdown -->
@@ -73,13 +79,16 @@
       </div>
 
       <div class="button_box col-xl-1 col-lg-1 col-md-12 col-sm-12 col-12">
-        <button id="search_button" class="btn search-button" onclick="loadSearch()">
+        <button id="search_button1" class="btn search-button">
           <i class="search_button fa fa-search fa-2x" aria-hidden="true"></i>
         </button>
       </div>
     </div>
-
+  <div class="alert alert-danger" id="alertSN" role="alert" style="margin-top: 5%; display: none;">
+    Tem de colocar um nome!
   </div>
+  </div>
+  
   <!-- ======================================================================= -->
 
   <br>
@@ -91,7 +100,7 @@
 
       <!-- =============================== Filtros-Selecionaveis =============================== -->
       <div class="col-xl-3 col-lg-3 select-filters" id=filtros_chk>
-        <h4 class="select-title"><b>Serviços</b></h6>
+        <h4 class="select-title" style="color: #707070;"><b>Filtros</b></h6>
           <hr>
           <div class="list-group" id="filters">
 
@@ -247,6 +256,7 @@
   <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <!-- Our JavaScript -->
   <script src="static/js/results_byname.js"></script>
+  <script src="static/js/search.js"></script>
 
   <script>
     $(window).on('resize', function () {

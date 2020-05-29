@@ -89,6 +89,11 @@ footer i.fa-instagram{
   padding-top: 9px;
   padding-bottom: 20px;
 }
+
+#dropdownMenuButton1:focus, #dropdownMenuButton:focus {
+  outline: none;
+  box-shadow:none;
+}
 /* ! ======================================================================================== */
 
 /* ! ====================================== DropDown ====================================== */
@@ -168,7 +173,7 @@ footer i.fa-instagram{
   display: inline-block;
   width: 100%;
   max-height: 20rem;
-  min-height: 15rem;
+  min-height: 18rem;
   padding: 15px;
   margin:30px;
   border-radius: 10px;
@@ -277,19 +282,25 @@ footer i.fa-instagram{
 
 
 
-.details-card div {
-}
-
-.details-card-section{
-}
-
 .details-card .fa-map-marker-alt{
   margin-left: 4px;
+
 }
 
 /* ! ======================================================================================== */
 
 /* ! ==================================== Side-Filters ========================================== */
+#filters {
+  color: #707070;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+h5 {
+  color: #707070;
+  font-weight: bold;
+}
+
 #filtros-chk {
   border-right: 1px solid #d8d8d8;
 }
@@ -660,3 +671,8 @@ footer i.fa-instagram{
     font-size:1rem;
   }
 }
+
+#search_button:focus, #input_text:focus, #search_button1:focus{
+  outline: none;
+  box-shadow:none;
+} 
