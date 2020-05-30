@@ -6,7 +6,7 @@
 
 .container {
     justify-content: left;
-    background-color: #FFBF69;
+    background-color: #0892a5;
     -webkit-border-radius: 25px;
     -moz-border-radius: 25px;
     border-radius: 25px;
@@ -114,6 +114,6 @@ h5 {
 }
 
 .home_button:hover {
-    background-color: #ffbf69;
+    background-color: #0892a5;
     color: white;
   }
