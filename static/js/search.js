@@ -1,3 +1,6 @@
+var distrito;
+var concelho;
+
 $("#aveiro").click(function(){
     $("#dropdownMenuButton").text("Aveiro");
 });
@@ -80,7 +83,9 @@ $("#search_button").click(function(){
     }
     else{
         $("#alertSL").css("display", "none");
-        window.location.href = 'results_bylocation.html?local=' + $("#dropdownMenuButton").text() +  $("#dropdownMenuButton1").text()
+        var distrito = $("#dropdownMenuButton").text();
+        var concelho = $("#dropdownMenuButton1").text();
+        window.location.href = 'results_bylocation.html?local=' + distrito +  concelho;
     }
     
 });
@@ -90,6 +95,7 @@ $("#search_button1").click(function(){
         $("#alertSN").css("display", "");
     }else{
         $("#alertSN").css("display", "none");
+        var nome = $("#input_text").val();
         window.location.href = 'results_byname.html?name=' + $("#input_text").val()
     }
 
@@ -107,3 +113,35 @@ $('#input_text').keypress(function (e) {
        $('#search_button1').click();
      }
 }); 
+
+function noReset(){
+    var elementos = window.location.href.split("local=")[1];
+    elementos = elementos.replace(/%20/g, " ");
+    elementos = elementos.replace(/%C3%A3/g, "ã");
+    elementos = elementos.split(" ");
+    distrito = elementos[0].split(/(?=[A-Z])/)[0];
+    concelho = elementos[0].split(/(?=[A-Z])/)[1];
+
+    if(elementos[0].split(/(?=[A-Z])/).length > 2){
+        for(var i = 2; i < elementos[0].split(/(?=[A-Z])/).length; i++){
+            concelho += elementos[0].split(/(?=[A-Z])/)[i]
+        }
+    }
+    
+    for(var i = 1; i < elementos.length; i++){
+        concelho += " " + elementos[i];
+    }
+    console.log(elementos);
+    $("#dropdownMenuButton").text(distrito);
+    $("#dropdownMenuButton1").text(concelho);
+
+}
+
+function noResetName(){
+    var nome = window.location.href.split("name=")[1];
+    var nome_pronto = nome.replace(/%20/g, " ");
+    nome_pronto = nome_pronto.replace(/%C3%A3/g, "ã");
+    console.log(nome_pronto);
+    $("#input_text").val(nome_pronto);
+
+}
