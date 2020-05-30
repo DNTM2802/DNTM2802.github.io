@@ -74,7 +74,7 @@ body {
 }
 
 .nav-selected {
-  color: #ffbf69!important;
+  color: #0892a5!important;
 }
 
 #ul_navbar {
@@ -88,7 +88,7 @@ body {
   z-index: 7;
   height: 70px;
   border-radius: 100px;
-  background-color: #ffbf69;
+  background-color: #0892a5;
   align-items: center;
   position: sticky;
   width: 100%;
@@ -158,12 +158,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #ffbf69;
+  background: #0892a5;
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #fcad47;
+  background: #0ab1c7;
 }
 /*----------------- CHECK BOX ---------------------*/
 
@@ -185,7 +185,7 @@ body {
 }
 
 .checkbox label input[type="checkbox"]:checked + span {
-  background-color: #ffbf69;
+  background-color: #0892a5;
   border: none;
 }
 
@@ -251,7 +251,7 @@ label {
   }
   .search-bar {
     height: 200px;
-    background-color: #ffbf69;
+    background-color: #0892a5;
     border-radius: 30px;
     padding-left: 20px;
     padding-right: 20px;
