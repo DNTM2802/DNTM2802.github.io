@@ -410,11 +410,16 @@ $("#submit").click(function () {
         $("#Obrigado").css("visibility", "visible");
         window.scrollTo(0, 0);
         var object = { "Morada": morada, "Nome": Nome, "Id": id, "Horario": horario, "Categorias": categorias, "Comodidades": comodidades, "Telefones": Telefones, "email": email, "Facebook": Facebook, "Instagram": Instagram, "Twitter": Twitter, "WebSite": Website, "Obs": Obs };
-        var jsonObj = JSON.parse(localStorage.getItem(DistricSelected + ConSelected));
-        console.log(localStorage.getItem(DistricSelected + ConSelected));
-        jsonObj.push(object);
-        console.log("ai e tal tou aqui")
-        localStorage.setItem(DistricSelected + ConSelected, JSON.stringify(jsonObj));
+        if (localStorage.getItem(DistricSelected + ConSelected) == undefined){
+            var array = [];
+            array.push(object);
+            localStorage.setItem(DistricSelected + ConSelected, JSON.stringify(array));
+        } else {
+            var jsonObj = JSON.parse(localStorage.getItem(DistricSelected + ConSelected));
+            jsonObj.push(object);
+            localStorage.setItem(DistricSelected + ConSelected, JSON.stringify(object));
+        }
+        
     }
     window.scrollTo(0, 0);
 });

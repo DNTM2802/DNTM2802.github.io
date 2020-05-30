@@ -75,8 +75,25 @@
         <button id="dropdownMenuButton1" class="selectBox btn dropdown-toggle d-flex justify-content-between"
           type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Concelho</button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-          <a class="dropdown-item" id="cacia" href="#">Cacia</a>
-          <a class="dropdown-item" id="ilhavo" href="#">Ilhavo</a>
+          <a class="dropdown-item" href="#" id="Agueda">Agueda</a>
+          <a class="dropdown-item" href="#" id="Albergaria-a-Velha">Albergaria-a-Velha</a>
+          <a class="dropdown-item" href="#" id="Anadia">Anadia</a>
+          <a class="dropdown-item" href="#" id="Arouca">Arouca</a>
+          <a class="dropdown-item" href="#" id="Aveiro">Aveiro</a>
+          <a class="dropdown-item" href="#" id="CastelodePaiva">Castelo de Paiva</a>
+          <a class="dropdown-item" href="#" id="Espinho">Espinho</a>
+          <a class="dropdown-item" href="#" id="Estarreja">Estarreja</a>
+          <a class="dropdown-item" href="#" id="Ilhavo">Ilhavo</a>
+          <a class="dropdown-item" href="#" id="Mealhada">Mealhada</a>
+          <a class="dropdown-item" href="#" id="Murtosa">Murtosa</a>
+          <a class="dropdown-item" href="#" id="OliveiradeAzemeis">Oliveira de Azemeis</a>
+          <a class="dropdown-item" href="#" id="OliveiradoBairro">Oliveira do Bairro</a>
+          <a class="dropdown-item" href="#" id="Ovar">Ovar</a>
+          <a class="dropdown-item" href="#" id="SantaMariadaFeira">Santa Maria da Feira</a>
+          <a class="dropdown-item" href="#" id="SãoJoãodaMadeira">São João da Madeira</a>
+          <a class="dropdown-item" href="#" id="SeverdoVouga">Sever do Vouga</a>
+          <a class="dropdown-item" href="#" id="Vagos">Vagos</a>
+          <a class="dropdown-item" href="#" id="ValedeCambra">Vale de Cambra</a>
         </div>
       </div>
 
@@ -281,6 +298,7 @@
     });
 
     $(window).on('load', function () {
+      noReset();
       var card_width = $($('.card')[0]).outerWidth();
       console.log(card_width);
       var img_left = card_width / 2;
