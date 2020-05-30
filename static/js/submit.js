@@ -121,6 +121,10 @@ $("#horario").change(function () {
     }
 });
 
+function firstScroll() {
+    window.scrollTo(0,600)
+}
+
 $("#submit").click(function () {
     $("#errors").show();
     var DistricSelected = $("#dropdownMenuButton").text().trim();
