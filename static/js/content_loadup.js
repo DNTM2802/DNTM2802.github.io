@@ -180,7 +180,6 @@ if(localStorage.length == 0){
 
     localStorage.setItem("AveiroIlhavo", json_string_avilhavo);
 }
-console.log("wtf")
 
 function randomInt() { // min and max included 
     return Math.floor(Math.random() * (999999 - 100000 + 1) + 100000);

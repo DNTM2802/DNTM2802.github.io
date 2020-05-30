@@ -231,7 +231,7 @@ $("#submit").click(function () {
     } else {
         $("#alert5").hide();
     }
-    if (email.match(/[a-z]+@[a-z]+.[a-z]/) == null && email.length != 0) {
+    if (email.match(/[a-z.0-9]+@[a-z]+.[a-z]/) == null && email.length != 0) {
         if ($("#alert6").length == 0) {
             var toAppend = '<div class="alert alert-warning" role="alert" id="alert6" style="visibility: visible;">Email inválido.</div>';
             $("#errors").append(toAppend);
