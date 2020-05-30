@@ -1,7 +1,8 @@
-if(localStorage.getItem("covid19check") == undefined){
-
-    localStorage.setItem("covid19check", "true");
+console.log(localStorage.getItem("covid19check"))
+if(localStorage.getItem("covid19check") == null){
     localStorage.clear();
+    localStorage.setItem("covid19check", "true");
+
 
     var AveiroCacia = []
 
@@ -182,7 +183,6 @@ if(localStorage.getItem("covid19check") == undefined){
 
     localStorage.setItem("AveiroIlhavo", json_string_avilhavo);
 }
-console.log("wtf")
 
 function randomInt() { // min and max included 
     return Math.floor(Math.random() * (999999 - 100000 + 1) + 100000);
