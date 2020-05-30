@@ -82,7 +82,7 @@ footer i.fa-instagram{
   z-index: 7;
   height: 70px;
   border-radius: 100px;
-  background-color: #0892a5;
+  background-color: #f4a261;
   align-items: center;
   position: sticky;
   width:100%;
@@ -192,8 +192,8 @@ footer i.fa-instagram{
 }
 
 .card-clicked{
-  border-color:#0892a5;
-  background-color: #0892a5;
+  border-color:#f4a261;
+  background-color: #f4a261;
   color:#f1f4fa;
   box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
 }
@@ -243,11 +243,11 @@ footer i.fa-instagram{
 }
 
 .fa-times {
-  color: #f7b267;
+  color: #d34747;
 }
 
 .fa-check {
-  color: #aaf683;
+  color: #157a6e;
 }
 /* ! ====================================================================================== */
 
@@ -261,8 +261,8 @@ footer i.fa-instagram{
   padding: 40px;
   margin: 30px;
   border-radius: 10px;
-  border-color:#0892a5;
-  background-color:  #0892a5;
+  border-color:#f4a261;
+  background-color:  #f4a261;
   font-size: 1.3rem;
   font-weight: normal;
   color: #f1f4fa;
@@ -349,8 +349,8 @@ h5 {
 }
 
 .list-group-item-clicked{
-  border-color:#0892a5;
-  background-color: #0892a5;
+  border-color:#f4a261;
+  background-color: #f4a261;
   color: #f1f4fa;
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.15);
 }
@@ -371,7 +371,7 @@ h5 {
   background-color: #f1f4fa;
   height: 40px;
   width: 40px;
-  color:#0892a5;
+  color:#f4a261;
   font-size: larger;
   font-weight: 900;
 }
@@ -391,7 +391,7 @@ h5 {
   padding-right: 40px;
   font-weight: 100;
   font-size:1.75rem;
-  background-color: #0892a5;
+  background-color: #f4a261;
   color:white;
   transition: 0.3s;
 }
@@ -505,7 +505,7 @@ h5 {
 
   .search-bar{
     height: 200px;
-    background-color: #0892a5;
+    background-color: #f4a261;
     border-radius: 30px;
     padding-left: 20px;
     padding-right: 20px;
@@ -547,8 +547,8 @@ h5 {
   }
 
   .dropdown-item-clicked{
-    border-color:#0892a5;
-    background-color: #0892a5;
+    border-color:#f4a261;
+    background-color: #f4a261;
     color: #383838;;
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.15);
   }
