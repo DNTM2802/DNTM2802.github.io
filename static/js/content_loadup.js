@@ -1,4 +1,6 @@
-if(localStorage.length == 0){
+if(localStorage.getItem("covid19check") == undefined){
+
+    localStorage.setItem("covid19check", "true");
     localStorage.clear();
 
     var AveiroCacia = []
