@@ -19,6 +19,13 @@ for (var n = 0; n < localStorage.length; n++) {
     }
 }
 console.log(obj_arr);
+
+// if there is no establishments 
+if(obj_arr.length == 0){
+    $("#noResults").css("display", "");
+    
+}
+
 for (var k = 0; k < obj_arr.length; k++) {
     results.appendChild(generate_card(obj_arr[k]));
 }
@@ -285,6 +292,7 @@ function loadDetails(id) {
             break;
         };
     }
+    console.log("nao ha resultados");
 
     if (found) {
         /* Get the results div. */
@@ -359,7 +367,7 @@ function loadDetails(id) {
             selected_id = -1;
         }
     } else {
-
+        console.log("nao ha resultados");
     }
 
 

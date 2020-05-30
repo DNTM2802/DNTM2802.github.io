@@ -8,6 +8,11 @@ const location_estab = urlParams.get('local');
 
 var estab_obj = JSON.parse(localStorage.getItem(String(location_estab)))
 
+if(estab_obj == null){
+    $("#noResults").css("display", "");
+}
+
+
 for (var k = 0; k < estab_obj.length; k++) {
     //console.log(estab_obj[k]);
     results.appendChild(generate_card(estab_obj[k]));
