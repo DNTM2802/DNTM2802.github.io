@@ -1,5 +1,5 @@
-if(localStorage.getItem("covid19check") == null){
-    
+if(localStorage.getItem("covid19check") == undefined){
+
     localStorage.setItem("covid19check", "true");
     localStorage.clear();
 
