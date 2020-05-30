@@ -28,14 +28,72 @@ $("#distrito").click(function () {
     $("#dropdownMenuButton").text("Aveiro");
 });
 
-$("#cacia").click(function () {
-    $("#dropdownMenuButton1").text("Cacia");
+$("#Agueda").click(function(){
+    $("#dropdownMenuButton1").text("Agueda");
 });
 
-$("#ilhavo").click(function () {
+$("#Albergaria-a-Velha").click(function(){
+    $("#dropdownMenuButton1").text("Albergaria-a-Velha");
+});
+$("#Anadia").click(function(){
+    $("#dropdownMenuButton1").text("Anadia");
+});
+
+$("#Arouca").click(function(){
+    $("#dropdownMenuButton1").text("Arouca");
+});
+
+$("#Aveiro").click(function(){
+    $("#dropdownMenuButton1").text("Aveiro");
+});
+
+$("#CastelodePaiva").click(function(){
+    $("#dropdownMenuButton1").text("Castelo de Paiva");
+});
+
+$("#Espinho").click(function(){
+    $("#dropdownMenuButton1").text("Espinho");
+});
+
+$("#Estarreja").click(function(){
+    $("#dropdownMenuButton1").text("Estarreja");
+});
+
+$("#Ilhavo").click(function(){
     $("#dropdownMenuButton1").text("Ilhavo");
 });
+$("#Mealhada").click(function(){
+    $("#dropdownMenuButton1").text("Mealhada");
+});
 
+$("#Murtosa").click(function(){
+    $("#dropdownMenuButton1").text("Murtosa");
+});
+$("#OliveiradeAzemeis").click(function(){
+    $("#dropdownMenuButton1").text("Oliveira de Azemeis");
+});
+
+$("#OliveiradoBairro").click(function(){
+    $("#dropdownMenuButton1").text("Oliveira do Bairro");
+});
+$("#Ovar").click(function(){
+    $("#dropdownMenuButton1").text("Ovar");
+});
+$("#SantaMariadaFeira").click(function(){
+    $("#dropdownMenuButton1").text("Santa Maria da Feira");
+});
+$("#SãoJoãodaMadeira").click(function(){
+    $("#dropdownMenuButton1").text("São João da Madeira");
+});
+$("#SeverdoVouga").click(function(){
+    $("#dropdownMenuButton1").text("Sever do Vouga");
+});
+$("#Vagos").click(function(){
+    $("#dropdownMenuButton1").text("Vagos");
+});
+$("#ValedeCambra").click(function(){
+    $("#dropdownMenuButton1").text("Vale de Cambra");
+});
 $("#morada").change(function () {
     var moradex = $("#morada").val();
     if (moradex.length > 7) {
