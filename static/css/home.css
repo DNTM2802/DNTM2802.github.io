@@ -6,7 +6,7 @@
 /* -------------------------------  BIG MAIN ELEMENTS  -------------------------------*/
 
 .home_section_title {
-  color: #0892a5;
+  color: #f4a261;
   font-weight: bold;
   margin-top: 15px;
   margin-bottom: 15px;
@@ -38,7 +38,7 @@
 }
 
 .home_button:hover {
-  background-color: #0892a5;
+  background-color: #f4a261;
   color: white;
 }
 
