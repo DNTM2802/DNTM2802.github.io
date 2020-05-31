@@ -116,8 +116,7 @@ $('#input_text').keypress(function (e) {
 
 function noReset(){
     var elementos = window.location.href.split("local=")[1];
-    elementos = elementos.replace(/%20/g, " ");
-    elementos = elementos.replace(/%C3%A3/g, "ã");
+    elementos = decodeURI(elementos);
     elementos = elementos.split(" ");
     distrito = elementos[0].split(/(?=[A-Z])/)[0];
     concelho = elementos[0].split(/(?=[A-Z])/)[1];
@@ -139,8 +138,7 @@ function noReset(){
 
 function noResetName(){
     var nome = window.location.href.split("name=")[1];
-    var nome_pronto = nome.replace(/%20/g, " ");
-    nome_pronto = nome_pronto.replace(/%C3%A3/g, "ã");
+    var nome_pronto = decodeURI(nome);
     console.log(nome_pronto);
     $("#input_text").val(nome_pronto);
 
