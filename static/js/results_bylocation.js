@@ -9,7 +9,7 @@ const location_estab = urlParams.get('local');
 var estab_obj = JSON.parse(localStorage.getItem(String(location_estab)))
 
 if(estab_obj == null){
-    $("#noResults").css("display", "");
+    document.getElementById("results").innerHTML += '<div class="alert alert-danger" id="noResults" role="alert"style="margin-top: 5%; width: 100%; text-align: center;">Não há estabelecimentos com o nome procurado!</div>';
 }
 
 
@@ -198,7 +198,7 @@ function generate_details(this_card) {
         fb.classList.add("fa-facebook");
         fb.classList.add("fa-lg");
         fb.classList.add("button");
-        a.href = this_card["Facebook"];
+        a.href = "https://" + this_card["Facebook"];
         a.target = "_blank";
         a.appendChild(fb)
         div_col.appendChild(a);
@@ -211,7 +211,7 @@ function generate_details(this_card) {
         ig.classList.add("fa-instagram");
         ig.classList.add("fa-lg");
         ig.classList.add("button");
-        a.href = this_card["Instagram"];
+        a.href = "https://" + this_card["Instagram"];
         a.target = "_blank";
         a.appendChild(ig)
         div_col.appendChild(a);
@@ -224,7 +224,7 @@ function generate_details(this_card) {
         tt.classList.add("fa-twitter");
         tt.classList.add("fa-lg");
         tt.classList.add("button");
-        a.href = this_card["Twitter"];
+        a.href = "https://" + this_card["Twitter"];
         a.target = "_blank";
         a.appendChild(tt)
         div_col.appendChild(a);

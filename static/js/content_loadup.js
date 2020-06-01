@@ -2,9 +2,8 @@ console.log(localStorage.getItem("covid19check"))
 if(localStorage.getItem("covid19check") == null){
     localStorage.clear();
     localStorage.setItem("covid19check", "true");
-
-
-    var AveiroCacia = []
+    console.log("Ola");
+    var AveiroAveiro = []
 
     var rest1 = {
         Id: randomInt(),
@@ -17,21 +16,21 @@ if(localStorage.getItem("covid19check") == null){
         Comodidades : [
             "TakeAway"
         ],
-        Telefones : ['134253243','657588675'],
-        email : 'duarte.ntm@ua.pt',
-        Facebook : 'facevook.com/duarte',
-        Instagram : 'instagram.com/duarte',
-        Twitter : 'twitter.com/duarte',
-        WebSite : 'duarte.com',
-        Obs : 'Uma obs qualquer'
+        Telefones : ['946376283','912563846'],
+        email : 'transmontano@gmail.com',
+        Facebook : 'facebook.com/otransmontano',
+        Instagram : 'instagram.com/otransmontano',
+        Twitter : 'twitter.com/otransmontano',
+        WebSite : 'otransmontano.com',
+        Obs : 'Obrigatório o uso de máscara.'
 
     }
 
     var rest2 = {
         Id: randomInt(),
         Nome: 'Churrascaria Tavares',
-        Horario: '13h-19h',
-        Morada: 'A morada da churrascaria',
+        Horario: '11h-21h',
+        Morada: 'Rua de Dr. Lopes Andrade 23',
         Categorias : [
             'restaurantes'
         ],
@@ -39,138 +38,136 @@ if(localStorage.getItem("covid19check") == null){
             "TakeAway",
             "EntregasPorTelefone"
         ],
-        Telefones : ['134253243','657588675'],
-        email : 'anibal.ntm@ua.pt',
-        Facebook : 'facevook.com/anibal',
-        Instagram : 'instagram.com/anibal',
-        Twitter : 'twitter.com/anibal',
-        WebSite : 'anibal.com',
-        Obs : 'Uma obs qualquer do anibal'
+        Telefones : ['926378142','963826498'],
+        email : 'churrascariatavares@ua.pt',
+        Facebook : 'facebook.com/churrascariatavares',
+        Instagram : 'instagram.com/churrascariatavares',
+        Twitter : 'twitter.com/churrascariatavares',
+        WebSite : 'churrascariatavares.com',
+        Obs : 'TakeAway a partir das 18h.'
 
     }
 
     var merc1 = {
         Id: randomInt(),
         Nome: 'Pingo Doce',
-        Horario: '13h-19h',
-        Morada: 'A morada do Pingo Doce',
+        Horario: '8h-22h',
+        Morada: 'Avenida dos Camelos 34',
         Categorias : [
             'mercados'
         ],
         Comodidades : [],
-        Telefones : ['134253243','657588675'],
-        email : 'pingo@ua.pt',
-        Facebook : 'facevook.com/pingo',
-        Instagram : 'instagram.com/pingo',
-        Twitter : 'twitter.com/pingo',
-        WebSite : 'pingo.com',
-        Obs : 'Uma obs qualquer do pingo doce'
+        Telefones : ['918252563','966012011'],
+        email : 'pingodoce@venha.ca',
+        Facebook : 'facebook.com/pingodoce',
+        Instagram : 'instagram.com/pingodoce',
+        Twitter : 'twitter.com/pingodoce',
+        WebSite : 'pingodoce.com',
+        Obs : 'Máscaras obrigatórias e à venda à entrada.'
 
     }
 
     var merc2 = {
         Id: randomInt(),
         Nome: 'Intermarche',
-        Horario: '13h-19h',
-        Morada: 'A morada da intermarche',
+        Horario: '8:30h-23h',
+        Morada: 'Avenida General Martins 12',
         Categorias : [
             'mercados'
         ],
         Comodidades : [],
-        Telefones : ['134253243','657588675'],
-        email : 'intermarche@ua.pt',
-        Facebook : 'facevook.com/intermarche',
+        Telefones : ['927383728','910007652'],
+        email : 'intermarche@gmail.com',
+        Facebook : 'facebook.com/intermarche',
         Instagram : 'instagram.com/intermarche',
         Twitter : 'twitter.com/intermarche',
         WebSite : 'intermarche.com',
-        Obs : 'Uma obs qualquer do intermarche'
+        Obs : 'Nennuma observação.'
 
     }
 
-    AveiroCacia.push(rest1);
-    AveiroCacia.push(rest2);
-    AveiroCacia.push(merc1);
-    AveiroCacia.push(merc2);
+    AveiroAveiro.push(rest1);
+    AveiroAveiro.push(rest2);
+    AveiroAveiro.push(merc1);
+    AveiroAveiro.push(merc2);
 
-    var json_string = JSON.stringify(AveiroCacia);
+    var json_string = JSON.stringify(AveiroAveiro);
 
-    localStorage.setItem("AveiroCacia", json_string);
+    localStorage.setItem("AveiroAveiro", json_string);
 
     var AveiroIlhavo = []
 
     var comb1 = {
         Id: randomInt(),
         Nome: 'Galp Ílhavo',
-        Horario: '13h-19h',
-        Morada: 'Morada da Galp de Ílhavo',
+        Horario: '7h-24h',
+        Morada: 'Rua Dr. Lopes Seabra 12',
         Categorias : [
             'combustiveis'
         ],
         Comodidades : [],
-        Telefones : ['134253243','657588675'],
-        email : 'galpilhavo@ua.pt',
-        Facebook : 'facevook.com/galpilhavo',
+        Telefones : ['916273816','923647281'],
+        email : 'galpilhavo@gmail.com',
+        Facebook : 'facebook.com/galpilhavo',
         Instagram : 'instagram.com/galpilhavo',
         Twitter : 'twitter.com/galpilhavo',
         WebSite : 'galpilhavo.com',
-        Obs : 'Uma obs da galpilhavo'
-
+        Obs : 'Apenas uma pessoa no pagamento.'
     }
 
     var comb2 = {
         Id: randomInt(),
         Nome: 'Prio Ílhavo',
-        Horario: '13h-19h',
-        Morada: 'A morada da da Prio de Ílhavo',
+        Horario: '6h-23h',
+        Morada: 'Travessa Fonte do Choupo 4',
         Categorias : [
             'combustiveis'
         ],
         Comodidades : [],
-        Telefones : ['134253243','657588675'],
-        email : 'prioilhavo@ua.pt',
-        Facebook : 'facevook.com/prioilhavo',
+        Telefones : ['916378456','934786142'],
+        email : 'prioilhavo@gmail.com',
+        Facebook : 'facebook.com/prioilhavo',
         Instagram : 'instagram.com/prioilhavo',
         Twitter : 'twitter.com/prioilhavo',
         WebSite : 'prioilhavo.com',
         Obs : 'Uma obs qualquer do prioilhavo'
-
     }
 
     var pad1 = {
         Id: randomInt(),
         Nome: 'Padaria Rosa',
-        Horario: '13h-19h',
-        Morada: 'A morada da Padaria Rosa',
+        Horario: '6h-20h',
+        Morada: 'Rua dos Falcões 4',
         Categorias : [
             'padarias'
         ],
         Comodidades : [],
-        Telefones : ['134253243','657588675'],
-        email : 'pardariarosa@ua.pt',
-        Facebook : 'facevook.com/pardariarosa',
+        Telefones : ['249673564','917348734'],
+        email : 'pardariarosa@gmail.com',
+        Facebook : 'facebook.com/pardariarosa',
         Instagram : 'instagram.com/pardariarosa',
         Twitter : 'twitter.com/pardariarosa',
         WebSite : 'pardariarosa.com',
-        Obs : 'Uma obs qualquer da pardaria rosa'
+        Obs : 'Número limitado de pessoas dentro da padaria.'
 
     }
 
     var pad2 = {
         Id: randomInt(),
         Nome: 'Padaria do Catarino',
-        Horario: '13h-19h',
-        Morada: 'A morada da Padaria do Catarino',
+        Horario: '7h-22h',
+        Morada: 'Rua Dr. Carlos Alexandre 45',
         Categorias : [
             'padarias'
         ],
         Comodidades : [],
-        Telefones : ['134253243','657588675'],
-        email : 'padariacatarino@ua.pt',
-        Facebook : 'facevook.com/padariacatarino',
+        Telefones : ['916725384','917734287'],
+        email : 'padariacatarino@gmail.com',
+        Facebook : 'facebook.com/padariacatarino',
         Instagram : 'instagram.com/padariacatarino',
         Twitter : 'twitter.com/padariacatarino',
         WebSite : 'padariacatarino.com',
-        Obs : 'Uma obs qualquer da padaria catarino'
+        Obs : 'Pastelaria encerrada, só padaria em funcionamento.'
 
     }
 
