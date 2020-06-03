@@ -1,8 +1,7 @@
 console.log(localStorage.getItem("covid19check"))
-if(localStorage.getItem("covid19check") == null){
+if(localStorage.getItem("covid19check") == undefined){
     localStorage.clear();
     localStorage.setItem("covid19check", "true");
-    console.log("Ola");
     var AveiroAveiro = []
 
     var rest1 = {
